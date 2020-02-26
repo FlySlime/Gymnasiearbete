@@ -4,7 +4,7 @@ import math
 def isPerfectPower(n):
     # Generate all divisors up to log2(n)
     divisors = []
-    for x in range(2, int(math.log2(n)) + 1):
+    for x in range(2, math.ceil(math.log2(n)) + 1):
         if n % x == 0:
             divisors.append(x)
 
@@ -21,6 +21,6 @@ def isPerfectPower(n):
 
 
 # Temporary
-n = 20
+n = 36
 if isPerfectPower(n):
     print("Composite")
