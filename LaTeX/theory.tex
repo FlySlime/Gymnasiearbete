@@ -1,6 +1,9 @@
 % !TEX root = ./main.tex
 \documentclass[main.tex]{subfiles}
+\usepackage{amsmath}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
 \begin{document}
+
 
 \subsection{What Is a Prime?}
 Prime numbers are defined as \textit{positive integers} which only have the factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. An exception to this definition is $1$, since it's the first natural number.
@@ -8,7 +11,7 @@ Prime numbers are defined as \textit{positive integers} which only have the fact
 If a number, $n$, is not prime, it is referred to as a \textit{composite number}.
 
 \subsection{Mersenne Primes}
-A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a prime number. An example of this is $2^5-1$ which equals to $127$ which is a prime. Apart from having a connection to perfect numbers, mersenne primes are useful when it comes to finding larger and larger primes, because of their special properties which the computer programs exploit. This is undoubtely the reason the eight largest primes are all mersenne primes. A special property of mersenne primes is that for some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$ where $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$. This property is exploited in the Lucas-Lehmer primality test, which is considered to be the fastest test for primes available. This test is however restricted to only dealing with numbers on the form $2^p-1$. 
+A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a prime number. An example of this is $2^5-1$ which equals to $127$ which is a prime. Apart from having a connection to perfect numbers, mersenne primes are useful when it comes to finding larger and larger primes, because of their special properties which the computer programs exploit. This is undoubtely the reason the eight largest primes are all mersenne primes. 
 
 \subsection{The Fundamental Theory of Arithmetic}
 The Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all integers greater than $1$ is either a prime, or can be expressed as a product of primes in a unique way. This means that all natural numbers, except for $1$, has its own factorization containing only primes, unless it is a prime itself.
@@ -174,9 +177,48 @@ The fourth and last example will be about $O(log (n))$. The algorithm that is us
 
 \end{python}
 
-%3. explain mersenne primes
-%4. pi(n) amount fo priems
-%4. explain (something more maybe)
+\subsection{Deterministic vs. Probabilistic}
+A deterministic test is a test that is a one-hundred percent definite test for primes, that gives no false positives or false negatives. It either returns true if the number being tested if prime, else it returns false. 
 
+Probabilistic tests differ from deterministic tests by having a stochastic, random, factor in them. They are not one-hundred percent definite and therefore sometimes will give false positives or negatives. An example of a probabilistic test for the number $p$ would be to test a random number below $p$ and see if it divides $p$ evenly. This test would give a lot of false positives, because even if $p$ is composite, not all numbers below it will divide it. The accuracy of the test, i.e. the probability that it returns a correct answer, could be increased by increasing the amount of unique factors tested. This will be an important fact in the Fermat and Miller-Rabin primality tests. There, the variable $k$ will be used to specify the number of rounds the test will run. 
+
+\subsection{Algorithms}
+
+ECP is the most used primaltiy
+
+\subsubsection{Brute-force}
+The brute force method is arguably the simplest of all algorithms. This algorithm tests all the numbers, $n$, between $2$ and $p-1$ and checks if $n$ satisfies $n \equiv 0 \Mod{p}$, which makes $n$ a divisor of $p$ and therefore $p$ is definitely not prime. If the loop, however, completes without finding any divisors of $p$, then $p$ is definitely prime. The pros of this method are that it is simple to understand, and that it is a definite test; $p$ is prime if and only if there are no divisors except for 1 and $p$ itself. The big con is that this algorithm is slow. It runs in $O(N)$ time which is the slowest of all algorithms which will be tested in this essay. 
+
+\begin{python}
+    Insert code here
+\end{python}
+
+\subsubsection{Smart Brute-force}
+The smart brute force is also a brute force algorithm, but it utilizes some of the properties of primes. Since a prime can never have the factor $2$ in them, it is sufficient to only test $2$ and the odd numbers. On top of this, the smart brute force only tests numbers up to and including $\sqrt{p}$. This is because, assuming that $p$ is composite, it must have at least 2 factors. If there exists a factor larger than $\sqrt{p}$, it must have already been tested. This algorithm will run in $O(\sqrt(n))$ time, which is much faster than the original brute force.
+
+\begin{python}
+    Insert code here
+\end{python}
+
+\subsubsection{Lucas-Lehmer}
+The Lucas-Lehmer algorithm is a deterministic primality test that only works for Mersenne numbers. It takes advantage of a special property of Mersenne numbers:
+
+\begin{mdframed}
+    For some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$ where $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$. 
+\end{mdframed}
+
+There exists a proof for this, which will not be covered by this essay.
+
+The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime Search) to find many of the largest primes known to man. This because the time complexity of this test is much faster compared to the other tests. Another advantage it has over some of the other tests, is that it is deterministic.
+
+\subsubsection{AKS}
+While the algorithm is of immense theoretical importance, it is not used in practice, rendering it a galactic algorithm. (See galactic algorithm)
+- Från wikipedia!!! Väldigt intressant
+
+
+\subsubsection{Fermat}
+
+\subsubsection{Miller–Rabin}
+Finns en determinstic variant av miller rabin. Kan kanske nämnas?
 
 \end{document}
