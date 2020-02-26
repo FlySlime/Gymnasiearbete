@@ -22,9 +22,6 @@ def millerRabin(n, k):
         for _ in range(r - 1):
             x = pow(x, 2, n)
             if x == 1:
-                return "composite"
-        return "composite"
-    return "probably prime"
-
-
-print(millerRabin(2 ** 23209 - 1, 10))
+                return False
+        return False
+    return True
