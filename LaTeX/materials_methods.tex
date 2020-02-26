@@ -18,7 +18,7 @@ Two groups of algorithms will be tested: the deterministic and the probabilistic
         \item Brute-force
         \item Smart Brute-force
         \item Lucas-Lehmer \cite{algh:lucas}
-        \item AKS Primality Test \cite{algh:aks}
+        \item AKS Primality Test \cite{algh:AKS}
     \end{enumerate}
     \item Probabilistic tests \cite{algh:probab}
     \begin{enumerate}
@@ -69,103 +69,6 @@ To generate the largest prime within $30$ seconds, the \textbf{primeTest} functi
                 primes.append(n)
             n += 1
         print(max(primes))
-\end{python}
-
-
-
-\subsection{Algorithms}
-
-\subsubsection{Brute-force}
-
-This is the Brute-force algorithm.
-
-\begin{python}
-    def brute(n):
-        for x in range(2, n):
-            if n % x == 0:
-                return False
-        return True
-\end{python}
-
-\vspace{10mm}
-
-This is the Smart Brute-force algorithm.
-
-\begin{python}
-    import math
-
-    def smartBrute(n):
-        if n == 1:
-            return False
-        if n == 2:
-
-            return True
-        for x in range(3, math.sqrt(n), 2):
-            if n % x == 0:
-                return False
-        return True
-\end{python}
-
-\subsubsection{Lucas-Lehmer}
-
-\begin{python}
-    def lehmer(n):
-        s = 4
-        M = pow(2, n) - 1
-        for i in range(n - 2):
-            s = pow(s, 2, M) - 2
-        if s == 0:
-            return True
-        else:
-            return False
-\end{python}
-
-\subsubsection{AKS}
-
-\subsubsection{Fermat}
-
-\begin{python}
-    import random
-
-
-    def fermat(n, k):
-        # Use _ as "index" variable - means no declared variable
-        for _ in range(k):
-            a = random.randint(2, n - 2)
-            if pow(a, n - 1, n) != 1:
-                return False
-            return True  
-\end{python}
-
-\subsubsection{Miller–Rabin}
-
-\begin{python}
-    import random
-
-
-    def findIntegers(n):
-        counter = 0
-        number = n - 1
-        while number % 2 == 0:
-            counter += 1
-            number //= 2
-        return(counter, number)
-    
-    
-    def millerRabin(n, k):
-        r, d = findIntegers(n)
-        # Use _ as "index" variable - means no declared variable
-        for _ in range(k):
-            a = random.randint(2, n - 2)
-            x = pow(a, d, n)
-            if x == 1 or x == n - 1:
-                continue
-            for _ in range(r - 1):
-                x = pow(x, 2, n)
-                if x == 1:
-                    return False
-            return False
-        return True    
 \end{python}
 
 \end{document}
