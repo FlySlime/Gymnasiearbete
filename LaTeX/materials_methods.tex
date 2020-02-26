@@ -17,6 +17,7 @@ Two groups of algorithms will be tested: the deterministic and the probabilistic
     \begin{enumerate}
         \item Brute-force
         \item Smart Brute-force
+        \item Lucas-Lehmer \cite{algh:lucas}
         \item AKS Primality Test \cite{algh:AKS}
     \end{enumerate}
     \item Probabilistic tests \cite{algh:probab}
@@ -74,8 +75,6 @@ To generate the largest prime within $30$ seconds, the \textbf{primeTest} functi
 
 \subsection{Algorithms}
 
-Vi skriver lite trivia och importance om algoritmer
-
 \subsubsection{Brute-force}
 
 This is the Brute-force algorithm.
@@ -107,9 +106,23 @@ This is the Smart Brute-force algorithm.
         return True
 \end{python}
 
-\subsubsection{AKS Primality Test}
+\subsubsection{Lucas-Lehmer}
 
-\subsubsection{Fermat Primality}
+\begin{python}
+    def lehmer(n):
+        s = 4
+        M = pow(2, n) - 1
+        for i in range(n - 2):
+            s = pow(s, 2, M) - 2
+        if s == 0:
+            return True
+        else:
+            return False
+\end{python}
+
+\subsubsection{AKS}
+
+\subsubsection{Fermat}
 
 \begin{python}
     import random
@@ -120,8 +133,8 @@ This is the Smart Brute-force algorithm.
         for _ in range(k):
             a = random.randint(2, n - 2)
             if pow(a, n - 1, n) != 1:
-                return("composite")
-            return("probably prime")    
+                return False
+            return True  
 \end{python}
 
 \subsubsection{Miller–Rabin}
@@ -150,9 +163,9 @@ This is the Smart Brute-force algorithm.
             for _ in range(r - 1):
                 x = pow(x, 2, n)
                 if x == 1:
-                    return "composite"
-            return "composite"
-        return "probably prime"    
+                    return False
+            return False
+        return True    
 \end{python}
 
 \end{document}

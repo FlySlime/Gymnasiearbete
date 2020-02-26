@@ -5,7 +5,10 @@
 \subsection{What Is a Prime?}
 Prime numbers are defined as \textit{positive integers} which only have the factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. An exception to this definition is $1$, since it's the first natural number.
 
-If a number, $n$, is not prime, it is refered to as a \textit{composite number}.
+If a number, $n$, is not prime, it is referred to as a \textit{composite number}.
+
+\subsection{Mersenne Primes}
+A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a prime number. An example of this is $2^5-1$ which equals to $127$ which is a prime. Apart from having a connection to perfect numbers, mersenne primes are useful when it comes to finding larger and larger primes, because of their special properties which the computer programs exploit. This is undoubtely the reason the eight largest primes are all mersenne primes. A special property of mersenne primes is that for some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$ where $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$. This property is exploited in the Lucas-Lehmer primality test, which is considered to be the fastest test for primes available. This test is however restricted to only dealing with numbers on the form $2^p-1$. 
 
 \subsection{The Fundamental Theory of Arithmetic}
 The Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all integers greater than $1$ is either a prime, or can be expressed as a product of primes in a unique way. This means that all natural numbers, except for $1$, has its own factorization containing only primes, unless it is a prime itself.
