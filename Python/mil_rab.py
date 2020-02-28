@@ -13,8 +13,7 @@ def findIntegers(n):
 def millerRabin(n, k):
     r, d = findIntegers(n)
     # Use _ as "index" variable - means no declared variable
-    for i in range(k):
-        print(i)
+    for _ in range(k):
         a = random.randint(2, n - 2)
         x = pow(a, d, n)
         if x == 1 or x == n - 1:
