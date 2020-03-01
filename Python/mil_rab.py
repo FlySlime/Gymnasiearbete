@@ -24,5 +24,3 @@ def millerRabin(n, k):
                 return False
         return False
     return True
-
-print(millerRabin(127, 10))
