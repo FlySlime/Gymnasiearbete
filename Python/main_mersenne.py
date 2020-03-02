@@ -19,8 +19,8 @@ from mil_rab import millerRabin
 
 
 def driver():
-    # 10 exponents to mersenne primes, these will be tested
-    # taken from https://en.wikipedia.org/wiki/Mersenne_prime
+    # 10 exponents for mersenne primes
+    # Taken from https://en.wikipedia.org/wiki/Mersenne_prime
     exponent = [607, 1279, 2203, 4423, 9689, 11213, 19937, 23209, 44497, 86243]
     for n in exponent:
         start = time.time()
