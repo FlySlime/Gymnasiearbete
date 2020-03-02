@@ -29,11 +29,11 @@ def driver():
         if timelimit > time.time():
             print(
                 str(n) + ": O\nTime: " + str(time.time() - start) +
-                " seconds \n")
+                " seconds\n")
         else:
             print(
                 str(n) + ": X\nTime: " + str(time.time() - start) +
-                " seconds \n")
+                " seconds\n")
             return
 
 
