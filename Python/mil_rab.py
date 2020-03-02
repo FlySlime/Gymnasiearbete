@@ -7,7 +7,7 @@ def findIntegers(n):
     while number % 2 == 0:
         counter += 1
         number //= 2
-    return(counter, number)
+    return (counter, number)
 
 
 def millerRabin(n, k):
@@ -22,5 +22,7 @@ def millerRabin(n, k):
             x = pow(x, 2, n)
             if x == 1:
                 return False
+        if x == n - 1:
+            continue
         return False
     return True
