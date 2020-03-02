@@ -1,4 +1,6 @@
 LaTeX/__latexindent_temp.tex
 LaTeX/Build/*
+LaTeX/_region*
+LaTeX/prv*
 !LaTeX/Build/main.pdf
 Python/__pycache__
