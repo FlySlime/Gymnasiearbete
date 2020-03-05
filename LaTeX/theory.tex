@@ -9,7 +9,7 @@ Prime numbers are defined as \textit{positive integers} which only have the fact
 If a number, $n$, is not prime, it is referred to as a \textit{composite number}.
 
 \subsection{Mersenne Primes}
-A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a prime number. An example of this is $2^5-1$ which equals to $127$ which is a prime. Apart from having a connection to perfect numbers, mersenne primes are useful when it comes to finding larger and larger primes, because of their special properties which the computer programs exploit. This is undoubtely the reason the eight largest primes are all mersenne primes. 
+A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a prime number. An example of this is $2^5-1$ which equals to $127$ which is a prime. Apart from having a connection to perfect numbers, mersenne primes are useful when it comes to finding larger and larger primes, because of their special properties which the computer programs exploit. This is undoubtedly the reason the eight largest primes are all mersenne primes. 
 
 \subsection{The Fundamental Theory of Arithmetic}
 The Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all integers greater than $1$ is either a prime, or can be expressed as a product of primes in a unique way. This means that all natural numbers, except for $1$, has its own factorization containing only primes, unless it is a prime itself.
@@ -61,7 +61,7 @@ The Prime Number Theorem \cite{theorem:prime_num} describes approximately how ma
 \caption{The graph of $\pi(N)$ and $N$ from $0$ to $10^{5}$ letting us compare the relationship between the number $N$ and the approximate amount of primes below it.}
 \end{figure}
 
-This proves that primes do not show up linearaly, meaning a computer that is twice as powerful will \textit{not} produce twice as many primes. Instead, the most important and crucial part of generating and verifying primes is the optimization of the \textit{algorithms}.
+This proves that primes do not show up linearly, meaning a computer that is twice as powerful will \textit{not} produce twice as many primes. Instead, the most important and crucial part of generating and verifying primes is the optimization of the \textit{algorithms}.
 
 \subsection{Time Complexity}
 
@@ -152,7 +152,7 @@ The third program describes $O(\sqrt{n})$. It is a simple program that sums all 
 
 \vspace{10mm}
 
-The fourth and last example will be about $O(log (n))$. The algorithm that is used in this example is called \textit{Binary Search} \cite{algh:binary_search}. It's an algorithm used for quickly guessing a number between, for example, $1$ and $100$. Usually two players are required to play this guessing game, but with a computer the user will give an input that the computer will try to guess. The output will be the amount of "guesses" the algorithm perfomed.
+The fourth and last example will be about $O(log (n))$. The algorithm that is used in this example is called \textit{Binary Search} \cite{algh:binary_search}. It's an algorithm used for quickly guessing a number between, for example, $1$ and $100$. Usually two players are required to play this guessing game, but with a computer the user will give an input that the computer will try to guess. The output will be the amount of "guesses" the algorithm performed.
 
 \begin{python}
     def binarySearch():
@@ -182,8 +182,6 @@ Probabilistic tests differ from deterministic tests by having a stochastic, rand
 
 \subsection{Algorithms}
 
-ECP is the most used primaltiy
-
 \subsubsection{Brute-force}
 The brute force method is arguably the simplest of all algorithms. This algorithm tests all the numbers, $n$, between $2$ and $p-1$ and checks if $n$ satisfies $n \equiv 0 \Mod{p}$, which makes $n$ a divisor of $p$ and therefore $p$ is definitely not prime. If the loop, however, completes without finding any divisors of $p$, then $p$ is definitely prime. The pros of this method are that it is simple to understand, and that it is a definite test; $p$ is prime if and only if there are no divisors except for 1 and $p$ itself. The big con is that this algorithm is slow. It runs in $O(N)$ time which is the slowest of all algorithms which will be tested in this essay. 
 
@@ -209,14 +207,8 @@ There exists a proof for this, which will not be covered by this essay.
 
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime Search) to find many of the largest primes known to man. This because the time complexity of this test is much faster compared to the other tests. Another advantage it has over some of the other tests, is that it is deterministic.
 
-\subsubsection{AKS}
-While the algorithm is of immense theoretical importance, it is not used in practice, rendering it a galactic algorithm. (See galactic algorithm)
-- Från wikipedia!!! Väldigt intressant
-
-
 \subsubsection{Fermat}
 
 \subsubsection{Miller–Rabin}
-Finns en determinstic variant av miller rabin. Kan kanske nämnas?
 
 \end{document}

@@ -6,10 +6,10 @@
 
 The most important resource to be used in this study will be Wikipedia and the countless articles written regarding this subject. The programming language used to implement and time the algorithms will be Python\footnote{Although Python is one of the slowest languages, the simplicity of it makes it an invaluable tool for this study.} \cite{python}.
 
-As of today, the largest primes are found using supercomputers running these algorithms. Using a supercomputer is not plausible for this study, therefore the maxmimum limit for primes will be $10^{14}$.
+As of today, the largest primes are found using supercomputers running these algorithms. Using a supercomputer is not plausible for this study, therefore the maximum limit for primes will be $10^{14}$.
 
 \subsection{Methods}
-During the primality testing \cite{prime:test} there will be two test cases for the algorithms. The first one will determine if $n$ is a prime or composite, and the second one will generate the largest prime within a time limit. At the start of the code a driver function will be defined to serve as the "starter" code for the program - deciding what test to perform. The driver function will call a primality testing function called \textbf{primeTest} which will return a boolean\footnote{A function that returns $True$ or $False$} value. 
+During the primality testing \cite{prime:test} there will be two test cases for the algorithms. The first one will determine if $n$ is a prime or composite, and the second one will generate the largest prime within a time limit. At the start of the code a driver function will be defined to serve as the "starter" code for the program - deciding what test to perform. The driver function will call a primality testing function called \textbf{primeTest} which will return a Boolean\footnote{A function that returns $True$ or $False$} value. 
 
 Two groups of algorithms will be tested: the deterministic and the probabilistic tests. The driver function will be called to start a timer and execute one of the following algorithms:
 \begin{enumerate}
@@ -18,7 +18,6 @@ Two groups of algorithms will be tested: the deterministic and the probabilistic
         \item Brute-force
         \item Smart Brute-force
         \item Lucas-Lehmer \cite{algh:lucas}
-        \item AKS Primality Test \cite{algh:aks}
     \end{enumerate}
     \item Probabilistic tests \cite{algh:probab}
     \begin{enumerate}
@@ -54,10 +53,10 @@ The function will be called upon five times to average an "accurate" runtime. Th
         driver()
 \end{python}
 
-The algorithms will be stored in a seperate file, hence the \textit{from FILE import ALGORITHM} at the top of the code. To see further details and the $*.py$ files, refer to the essays GitHub page \cite{github}.
+The algorithms will be stored in a separate file, hence the \textit{from FILE import ALGORITHM} at the top of the code. To see further details and the $*.py$ files, refer to the essays GitHub page \cite{github}.
 \newline
 \\*
-To generate the largest prime within $30$ seconds, the \textbf{primeTest} function will remain the same, however the driver function will recieve some changes:
+To generate the largest prime within $30$ seconds, the \textbf{primeTest} function will remain the same, however the driver function will receive some changes:
 
 \begin{python}
     def driver():
