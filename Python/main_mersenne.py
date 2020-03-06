@@ -19,13 +19,13 @@ from mil_rab import millerRabin
 
 
 def driver():
-    # 10 exponents for mersenne primes
+    # 13 exponents for mersenne primes
     # Taken from https://en.wikipedia.org/wiki/Mersenne_prime
-    exponent = [607, 1279, 2203, 4423, 9689, 11213, 19937, 23209, 44497, 86243]
+    exponent = [19, 31, 61, 107, 607, 1279, 4423, 9689, 11213, 19937, 23209, 44497, 86243]
     for n in exponent:
         start = time.time()
         timelimit = time.time() + 120  # 120 seconds
-        primeTest(n)
+        primeTest(pow(2, n) - 1)
         if timelimit > time.time():
             print(
                 str(n) + ": O\nTime: " + str(time.time() - start) +
@@ -38,7 +38,7 @@ def driver():
 
 
 def primeTest(n):
-    lehmer(n)  # Algorithm change here
+    smartBrute(n)  # Algorithm change here
 
 
 if __name__ == "__main__":
