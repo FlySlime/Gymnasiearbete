@@ -22,13 +22,17 @@ def driver():
     timelimit = time.time() + 60  # 60 seconds
     while time.time() < timelimit:
         if primeTest(n):
-            primes.append(n)
+            # Make sure the prime was still within the timelimit
+            if time.time() < timelimit:
+                primes.append(n)
+            else:
+                break
         n += 1
     print(max(primes))
 
 
 def primeTest(n):
-    if smartBrute(n):  # Algorithm change here
+    if brute(n):  # Algorithm change here
         return True
     return False
 
