@@ -1,5 +1,6 @@
 LaTeX/__latexindent_temp.tex
 LaTeX/auto/*
+LaTeX/.auctex-auto/*
 LaTeX/Build/*
 LaTeX/_region*
 LaTeX/prv*

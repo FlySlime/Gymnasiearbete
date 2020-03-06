@@ -11,7 +11,7 @@ def findIntegers(n):
 
 
 def millerRabin(n, k):
-    if n < 5:    # n under 5 cannot be verified
+    if n < 5:  # n under 5 cannot be verified
         return False
     r, d = findIntegers(n)
     # Use _ as "index" variable - means no declared variable

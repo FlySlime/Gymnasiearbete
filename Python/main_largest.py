@@ -1,13 +1,14 @@
 # This driver file finds the largest prime within
 # a minute and prints it.
 #
-# Change line 31 to desired algorithm, i.e. brute(n).
+# Change line 35 to desired algorithm, i.e. brute(n).
 # WARNING! Lucas-lehmer cannot be used.
 #
 # Make sure fermat and millerRabin are written as
 # <function>(n, 10). Where 10 is k, the second parameter
 
 import time
+
 # from FILE import FUNCTION
 from brute import brute
 from smart_brute import smartBrute
