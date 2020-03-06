@@ -4,13 +4,18 @@
 
 \subsection{Finding largest prime in 60 seconds}
 
+Three tests are performed to try to eliminate factors. The median is taken from
+the results.
+
 \begin{table}[ht!]
   \centering
   \begin{tabular}{||c c c c c||}
     \hline
-    & Brute-force & Smart Brute-force & Fermat & Miller-Rabin \\ [0.5ex] 
+    $n$ & Brute-force & Smart Brute-force & Fermat & Miller-Rabin \\ [0.5ex] 
     \hline\hline
-    $n:$ & 1 & 2 & 3 & 4\\   [1ex] 
+    Test $1:$ & 146539 & 6431833 & 14577019 & 8920403\\ 
+    Test $2:$ & 145283 & 6323773 & 14899669 & 8952347\\ 
+    Test $3:$ & 144563 & 6421421 & 14923903 & 8892509\\   [1ex] 
     \hline
   \end{tabular}
 \end{table}
@@ -30,8 +35,8 @@
     9689 & WIP & WIP & WIP & WIP & WIP\\
     11213 & WIP & WIP & WIP & WIP & WIP\\
     19937 & WIP & WIP & WIP & WIP & WIP\\
-    23209 & WIP & WIP & WIP & WIP & WIP\\  [1ex] 
-    44497 & WIP & WIP & WIP & WIP & WIP\\  [1ex] 
+    23209 & WIP & WIP & WIP & WIP & WIP\\ 
+    44497 & WIP & WIP & WIP & WIP & WIP\\ 
     86243 & WIP & WIP & WIP & WIP & WIP\\  [1ex] 
     \hline
   \end{tabular}

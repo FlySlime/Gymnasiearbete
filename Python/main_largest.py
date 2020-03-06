@@ -32,7 +32,7 @@ def driver():
 
 
 def primeTest(n):
-    if brute(n):  # Algorithm change here
+    if millerRabin(n, 10):  # Algorithm change here
         return True
     return False
 
