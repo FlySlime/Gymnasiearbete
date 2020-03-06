@@ -67,6 +67,10 @@ This proves that primes do not show up linearly, meaning a computer that is twic
 
 Time complexity \cite{theorem:time_comp} is a concept within computer science, which describes the approximate time for a program to complete. The study will make heavy use of the Big O Notation \cite{theorem:big_O}, which notates how the run time increases as the input size increases. For example, $O(N)$ will grow linearly with the input size. Increasing the input size by a factor of 10, will also increase the run time by a factor of 10, as such $O(10N)$. On the other hand, $O(log(n))$ grows logarithmically, which is far more efficient for bigger input sizes, as $O(log(N))$ is strictly smaller than $N$ for large enough values. The base for logarithms in the Big O Notation is not relevant. The proof as to why the base is irrelevant will not be provided by this study.
 \newline
+The amount of operations a modern computer can do is in the order of magnitude of $10^{9}$ per second. An operation is for example adding two numbers or storing a number in an array. 
+\newline
+Since the Big O Notation denotes the growth of the runtime as $\lim_{N\to\infty}$, two notations can be added together rather easily. For example, a program that has two bits of codes, one with $O(N)$ and another with $O(N^{2})$, will have an overall time complexity of $O(N^{2})$ since $N^{2}$ dominates for large values of $N$
+\newline
 \\*
 The Big O Notation will be used to determine whether an algorithm with a large number, $n$, will succeed or run for a \textit{very long time}\footnote{Some programs will not finish until the sun explodes, which is quite impractical.}. Considering that the largest known prime is $24,862,048$ digits \cite{prime:largest_digits}, algorithms have to be efficient to perform a primality test. 
 
@@ -117,7 +121,7 @@ The Big O Notation will be used to determine whether an algorithm with a large n
 
 \vspace{10mm}
 
-A program that runs in $O(N)$ would be a function that inputs an integer $N$ and outputs every number up to $N$:
+A program that runs in $O(N)$ would be a function that inputs an integer $N$ and outputs every number up to $N$. This runs in $O(N)$ time because it does $1+N$ operations which results in $O(n)$:
 \begin{python}
 def linearTime(N):
     for number in range(N):
