@@ -4,7 +4,7 @@
 # on with an 'X'. However, if it succeeded, it will
 # instead print an 'O' and the time it took.
 #
-# Change line 41 to desired algorithm, i.e. brute(n).
+# Change line 52 to desired algorithm, i.e. brute(n).
 #
 # Make sure fermat and millerRabin are written as
 # <function>(n, 10). Where 10 is k, the second parameter
@@ -49,7 +49,7 @@ def driver():
 
 
 def primeTest(n):
-    smartBrute(n)  # Algorithm change here
+    millerRabin(n, 10)  # Algorithm change here
 
 
 if __name__ == "__main__":

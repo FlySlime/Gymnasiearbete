@@ -22,10 +22,10 @@ the results.
 
 \subsection{Biggest Mersenne prime tested in 120 seconds}
 
-At least three decimal numbers in the time.
+At least two decimal numbers
 O if success
 X if failure
-- if 5 minute over
+- if 5 minute over, manually cancel the program.
 
 \begin{table}[ht!]
   \centering
@@ -33,19 +33,19 @@ X if failure
     \hline
     $n$ & Brute-force & Smart Brute-force & Lucas-Lehmer & Fermat & Miller-Rabin  \\ [0.5ex] 
     \hline\hline
-    19 & \textbf{O} <1 second & \textbf{O} 1< second & WIP & WIP & WIP\\
-    31 & \textbf{X} 276.11 seconds & \textbf{O} 1< second & WIP & WIP & WIP\\
-    61 & - & \textbf{O} 99.30 seconds & WIP & WIP & WIP\\
-    107 & - & TEST!!!!!! & WIP & WIP & WIP\\
-    607 & - & WIP & WIP & WIP & WIP\\
-    1279 & - & WIP & WIP & WIP & WIP\\
-    4423 & - & WIP & WIP & WIP & WIP\\
-    9689 & - & WIP & WIP & WIP & WIP\\
-    11213 & - & WIP & WIP & WIP & WIP\\
-    19937 & - & WIP & WIP & WIP & WIP\\
-    23209 & - & WIP & WIP & WIP & WIP\\ 
-    44497 & - & WIP & WIP & WIP & WIP\\ 
-    86243 & - & WIP & WIP & WIP & WIP\\  [1ex] 
+    19    & \textbf{O} <1 second & \textbf{O} 1< second & <1 second & <1 second & <1 second\\
+    31    & \textbf{X} 276.11 seconds & \textbf{O} 1< second & <1 second & <1 second & WIP\\
+    61    & - & \textbf{O} 101.54 seconds & <1 second & <1 second & <1 second\\
+    107   & - & - & <1 second & <1 second & <1 second\\
+    607   & - & - & <1 second & <1 second & <1 second\\
+    1279  & - & - & <1 second & <1 second & <1 second\\
+    4423  & - & - & <1 second & <1 second & 2.72 seconds\\
+    9689  & - & - & 2.04 seconds & 2.49 seconds & 24.80 seconds\\
+    11213 & - & - & 3.12 seconds & 3.85 seconds & 37.71 seconds\\
+    19937 & - & - & 16.42 seconds & 20.35 seconds & 198.63 seconds\\
+    23209 & - & - & 25.65 & 31.37 seconds & -\\ 
+    44497 & - & - & 172.51 seconds & 208.85 seconds & -\\ 
+    86243 & - & - & - & - & -\\  [1ex] 
     \hline
   \end{tabular}
 \end{table}
