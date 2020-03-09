@@ -212,19 +212,28 @@ There exists a proof for this, which will not be covered by this essay.
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime Search) to find many of the largest primes known to man. This because the time complexity of this test is much faster compared to the other tests. Another advantage it has over some of the other tests, is that it is deterministic.
 
 \subsubsection{Fermat}
-
-\subsubsection{Miller–Rabin}
 * The history about the algorithm. Prob or Det? Who made it? Awards?
 * Why is it relevant? Time complexity?
 * How does it work?
 
-The Miller-Rabbin primality test \cite{algh:miller}, first discovered by Russian mathematician M.
-M. Artjuhov in 1967, is an algorithm that has two versions. One that is
-deterministic, and the other probabilistic. The deterministic version is
+
+\subsubsection{Miller–Rabin}
+The Miller-Rabbin primality test \cite{algh:miller}, first discovered by Russian
+mathematician M. M. Artjuhov in 1967, is an algorithm that has two versions. One
+that is deterministic, and the other probabilistic. The deterministic version is
 conditional, meaning that it relies on an unproven theorem, in this case, the
 extended Riemann hypothesis \cite{riemann}. However, the probabilistic version is
 unconditional, meaning that it does not depend on an unproven theorem. This
 makes the probabilistic version reliable. If the extended Riemann
 hypothesis were to be disproved, the deterministic version would fall apart.
-
+Therefore, the probabilistic is chosen for this study.
+\newline
+\\*
+The Miller-Rabbin primality test is considered to be one of the fastest
+algorithms to verify if an $n$ is prime or not. The time complexity for the
+probabilistic version is $O(k log^{3}(n))$, where $k$ is the amount of rounds
+the algorithm will perform. 
+\newline
+\\*
+insert how it works here
 \end{document}
