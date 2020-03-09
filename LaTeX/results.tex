@@ -4,48 +4,46 @@
 
 \subsection{Finding largest prime in 60 seconds}
 
-Three tests are performed to try to eliminate factors. The median is taken from
-the results.
+TO BE REMOVED: Three tests are performed to try to eliminate factors. The median
+is taken from the results.
 
 \begin{table}[ht!]
   \centering
-  \begin{tabular}{||c c c c c||}
+  \begin{tabular}{||c | c c c c||}
     \hline
-    $n$ & Brute-force & Smart Brute-force & Fermat & Miller-Rabin \\ [0.5ex] 
+    & Brute-force & Smart Brute-force & Fermat & Miller-Rabin \\ [0.5ex] 
     \hline\hline
-    Test $1:$ & 146539 & 6431833 & 14577019 & 8920403\\ 
-    Test $2:$ & 145283 & 6323773 & 14899669 & 8952347\\ 
-    Test $3:$ & 144563 & 6421421 & 14923903 & 8892509\\   [1ex] 
+    $Test$ $1$ & $146539$ & $6431833$ & $14577019$ & $8920403$\\ 
+    $Test$ $2$ & $145283$ & $6323773$ & $14899669$ & $8952347$\\ 
+    $Test$ $3$ & $144563$ & $6421421$ & $14923903$ & $8892509$\\   [1ex] 
     \hline
   \end{tabular}
 \end{table}
 
 \subsection{Biggest Mersenne prime tested in 120 seconds}
 
-At least two decimal numbers
-O if success
-X if failure
-- if 5 minute over, manually cancel the program.
+TO BE REMOVED: At least two decimal numbers O if success X if failure - if 5
+minute over, manually cancel the program.
 
 \begin{table}[ht!]
   \centering
-  \begin{tabular}{||c c c c c c||}
+  \begin{tabular}{||c | c c c c c||}
     \hline
-    $n$ & Brute-force & Smart Brute-force & Lucas-Lehmer & Fermat & Miller-Rabin  \\ [0.5ex] 
+    $p$ & Brute-force & Smart Brute-force & Lucas-Lehmer & Fermat & Miller-Rabin  \\ [0.5ex] 
     \hline\hline
-    19    & \textbf{O} <1 second & \textbf{O} 1< second & <1 second & <1 second & <1 second\\
-    31    & \textbf{X} 276.11 seconds & \textbf{O} 1< second & <1 second & <1 second & WIP\\
-    61    & - & \textbf{O} 101.54 seconds & <1 second & <1 second & <1 second\\
-    107   & - & - & <1 second & <1 second & <1 second\\
-    607   & - & - & <1 second & <1 second & <1 second\\
-    1279  & - & - & <1 second & <1 second & <1 second\\
-    4423  & - & - & <1 second & <1 second & 2.72 seconds\\
-    9689  & - & - & 2.04 seconds & 2.49 seconds & 24.80 seconds\\
-    11213 & - & - & 3.12 seconds & 3.85 seconds & 37.71 seconds\\
-    19937 & - & - & 16.42 seconds & 20.35 seconds & 198.63 seconds\\
-    23209 & - & - & 25.65 & 31.37 seconds & -\\ 
-    44497 & - & - & 172.51 seconds & 208.85 seconds & -\\ 
-    86243 & - & - & - & - & -\\  [1ex] 
+    $19$ & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $31$ & \colorbox{red}{$276.11$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $61$ & - & \colorbox{green}{$101.54$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $107$ & - & - & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $607$ & - & - & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $1279$ & - & - & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$}\\
+    $4423$ & - & - & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$<1$ $s$} & \colorbox{green}{$2.72$ $s$}\\
+    $9689$ & - & - & \colorbox{green}{$2.04$ $s$} & \colorbox{green}{$2.49$ $s$} & \colorbox{green}{$24.80$ $s$}\\
+    $11213$ & - & - & \colorbox{green}{$3.12$ $s$} & \colorbox{green}{$3.85$ $s$} & \colorbox{green}{$37.71$ $s$}\\
+    $19937$ & - & - & \colorbox{green}{$16.42$ $s$} & \colorbox{green}{$20.35$ $s$} &  \colorbox{red}{$198.63$ $s$}\\
+    $23209$ & - & - & \colorbox{green}{$25.65$ $s$} & \colorbox{green}{$31.37$ $s$} & -\\ 
+    $44497$ & - & - &  \colorbox{red}{$172.51$ $s$} &  \colorbox{red}{$208.85$ $s$} & -\\ 
+    $86243$ & - & - & - & - & -\\  [1ex] 
     \hline
   \end{tabular}
 \end{table}
