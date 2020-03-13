@@ -42,9 +42,13 @@ def driver():
         timelimit = time.time() + 120  # 120 seconds
         primeTest(pow(2, n) - 1)
         if timelimit > time.time():
-            print(str(n) + ": O\nTime: " + str(time.time() - start) + " seconds\n")
+            print(
+                str(n) + ": O\nTime: " + str(time.time() - start) +
+                " seconds\n")
         else:
-            print(str(n) + ": X\nTime: " + str(time.time() - start) + " seconds\n")
+            print(
+                str(n) + ": X\nTime: " + str(time.time() - start) +
+                " seconds\n")
             return
 
 
