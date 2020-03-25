@@ -1,6 +1,6 @@
 # Prime Numbers - Gymnasiearbete
 
-main.pdf is found in LaTeX
+main.pdf is found in LaTeX/Build
 
 DESCRIPTION HERE LATER
 
