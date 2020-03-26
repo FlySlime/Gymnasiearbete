@@ -1,4 +1,5 @@
 LaTeX/*
 !LaTeX/Images
 !LaTeX/*.tex
+!LaTeX/main.pdf
 Python/__pycache__
