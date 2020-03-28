@@ -5,29 +5,30 @@
 \subsection{What Is a Prime?}
 Prime numbers are defined as \textit{positive integers} which only have the
 factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other
-hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. An exception
-to this definition is $1$, since it's the first natural number.
+hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. If the
+number, $n$, is not prime, it is referred to as a \textit{composite number}.
 
-If a number, $n$, is not prime, it is referred to as a \textit{composite
-  number}.
+An exception to this definition is $1$, since it's the first natural number.
+Subsection \ref{arithmetic} provides a more in-depth definition of prime
+numbers, and a mathematical explanation about why $1$ is not a prime number.
 
 \subsection{Mersenne Primes}
 A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a
-prime number. An example of this is $2^5-1$ which equals to $127$ which is a
-prime. Apart from having a connection to perfect numbers, mersenne primes are
-useful when it comes to finding larger and larger primes, because of their
-special properties which the computer programs exploit. This is undoubtedly the
-reason the eight largest primes are all mersenne primes.
+prime number. An example of this is $2^5-1$ which equals to the prime number
+$127$. The eight largest prime numbers, as of writing this, are mersenne primes
+\cite{prime:largest_digits}. The reason being because of their easily
+exploitable properties by computers, making them faster to primality test than
+normal integers.
 
-\subsection{The Fundamental Theory of Arithmetic}
-The Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all
+\subsection{The Fundamental Theory of Arithmetic} \label{arithmetic} The
+Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all
 integers greater than $1$ is either a prime, or can be expressed as a product of
 primes in a unique way. This means that all natural numbers, except for $1$, has
 its own factorization containing only primes, unless it is a prime itself.
 \newline
 \\*
-Important to know is that there is an infinite amount of primes. The proof is a
-quite easy by contradiction, but nonetheless beautiful:
+For this study to be relevant, there has to be infinite amount of primes. There
+is an easy proof by contradiction for infinite primes:
 
 \begin{mdframed}
   Assume that there is a finite amount of primes and make a list of them:
@@ -62,35 +63,38 @@ Graphing this function shows that primes become less common for greater $N$.
       \end{axis}
     \end{tikzpicture}
   \end{center}
-  \caption{The graph of $\pi(N)$ and $N$ from $0$ to $10^{5}$ letting us compare
-    the relationship between the number $N$ and the approximate amount of primes
-    below it.}
+  \caption{The graph of $\pi(N)$ and $N$ from $0$ to $10^{5}$ can be used to
+    compare the relationship between the number $N$ and the approximate amount
+    of primes below it.}
 \end{figure}
 
+\noindent
 This proves that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
-most important and crucial part of generating and verifying primes is the
-optimization of the \textit{algorithms}.
+largest factor for verifying primes faster are the \textit{algorithms}.
 
 \subsection{Time Complexity}
 
 Time complexity \cite{theorem:time_comp} is a concept within computer science,
 which describes the approximate time for a program to complete. The study will
-make heavy use of the Big O Notation \cite{theorem:big_O}, which notates how the
-run time increases as the input size increases. For example, $O(N)$ will grow
-linearly with the input size. Increasing the input size by a factor of 10, will
-also increase the run time by a factor of 10, as such $O(10N)$. On the other
-hand, $O(log(n))$ grows logarithmically, which is far more efficient for bigger
-input sizes, as $O(log(N))$ is strictly smaller than $N$ for large enough
-values. The base for logarithms in the Big O Notation is not relevant. The proof
-as to why the base is irrelevant will not be provided by this study. \newline
+use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
+increases as the input size increases. For example, $O(N)$ will grow linearly
+with the input size. Increasing the input size by a factor of 10, will also
+increase the run time by a factor of 10, as such $O(10N)$. On the other hand,
+$O(log(n))$ grows logarithmically, which is far more efficient for bigger input
+sizes, as $O(log(N))$ is strictly smaller than $N$ for large enough values. The
+base for logarithms in the Big O Notation is not relevant. The proof as to why
+the base is irrelevant will not be provided by this study. \newline
+\\*
 The amount of operations a modern computer can do is in the order of magnitude
-of $10^{9}$ per second. An operation is for example adding two numbers or
-storing a number in an array. \newline Since the Big O Notation denotes the
-growth of the runtime as $\lim_{N\to\infty}$, two notations can be added
-together rather easily. For example, a program that has two bits of codes, one
-with $O(N)$ and another with $O(N^{2})$, will have an overall time complexity of
-$O(N^{2})$ since $N^{2}$ dominates for large values of $N$ \newline
+of $10^{9}$ per second. An operation is, for example, adding two numbers or
+storing a number in an array. \newline
+\\*
+Since the Big O Notation denotes the growth of the runtime as
+$\lim_{N\to\infty}$, two notations can be added together rather easily. For
+example, a program that has two bits of codes, one with $O(N)$ and another with
+$O(N^{2})$, will have an overall time complexity of $O(N^{2})$ since $N^{2}$
+dominates for large values of $N$. \newline
 \\*
 The Big O Notation will be used to determine whether an algorithm with a large
 number, $n$, will succeed or run for a \textit{very long time}\footnote{Some
@@ -99,6 +103,7 @@ Considering that the largest known prime is $24,862,048$ digits
 \cite{prime:largest_digits}, algorithms have to be efficient to perform a
 primality test.
 
+\newpage
 \subsubsection{Examples of Big O Notation}
 
 
@@ -115,9 +120,6 @@ primality test.
 
         \addplot [ domain=0:50, samples=100, color=green, ]{sqrt(x)};
         \addlegendentry{$O(\sqrt{n})$}
-
-        \addplot [ domain=0:50, samples=100, color=black, ]{ln(x)};
-        \addlegendentry{$O(log(n))$}
       \end{axis}
     \end{tikzpicture}
   \end{center}
@@ -126,65 +128,51 @@ primality test.
     lot of stuff. The graph does a lot of stuff. The graph does a lot of stuff.}
 \end{figure}
 
-\vspace{10mm}
-
+\noindent
 A program that runs in $O(N)$ would be a function that inputs an integer $N$ and
 outputs every number up to $N$. This runs in $O(N)$ time because it does $1+N$
 operations which results in $O(n)$:
-\begin{python}
-  def linearTime(N): for number in range(N): print(number)
-\end{python}
 
+\begin{python}
+  def linearTime(N):
+      for number in range(N):
+          print(number)
+\end{python}
+\noindent
 Since the program runs in $O(N)$ time, increasing the input by a factor of $10$
 would also increase the number of operations done by a factor of $10$. \newline
 \\*
-The second example is a program that runs in quadratic time, i.e. $O(N^{2})$.
+The second example is a program that runs in quadratic time, $O(N^{2})$.
 Compared to the first example, this program will print every number up to $N$,
 $N$ times.
 
 \begin{python}
-  def quadraticTime(N): for number in range(N): for number in range(N):
-  print(number)
+  def quadraticTime(N):
+      for number in range(N):
+          for number in range(N):
+              print(number)
 \end{python}
 
-\vspace{10mm}
-
+\vspace{5mm}
+\noindent
 The third program describes $O(\sqrt{n})$. It is a simple program that sums all
 numbers up to $\sqrt{N}$.
 
 \begin{python}
-  from math
+  import math
 
-  def sqrtTime(N): sum = 0 for number in range(math.isqrt(N)): sum += number
-  print(sum)
-\end{python}
-
-\vspace{10mm}
-
-The fourth and last example will be about $O(log (n))$. The algorithm that is
-used in this example is called \textit{Binary Search} \cite{algh:binary_search}.
-It's an algorithm used for quickly guessing a number between, for example, $1$
-and $100$. Usually two players are required to play this guessing game, but with
-a computer the user will give an input that the computer will try to guess. The
-output will be the amount of "guesses" the algorithm performed.
-
-\begin{python}
-  def binarySearch(): begin = int(input("The number will be between _ and _\n"))
-  end = int(input()) value = int(input("What value will you input?\n")) guesses
-  = 0
-
-  while True: guesses += 1 mid = int((begin + end) / 2) if mid > value: end =
-  mid - 1 elif mid < value: begin = mid + 1 else: break
-
-  print(guesses)
-
+  def sqrtTime(N):
+      sum = 0
+      for number in range(math.isqrt(N)):
+          sum += number
+          print(sum)
 \end{python}
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a test that is a one-hundred percent definite test for
-primes, that gives no false positives or false negatives. It either returns true
-if the number being tested if prime, else it returns false.
-
+primes, that gives no false positives. It either returns true if the number
+being tested if prime, or false if the number is not prime. \newline
+\\*
 Probabilistic tests differ from deterministic tests by having a stochastic,
 random, factor in them. They are not one-hundred percent definite and therefore
 sometimes will give false positives or negatives. An example of a probabilistic
@@ -253,8 +241,7 @@ Fermat's little theory \cite{fermat:little} states \textit{``If $p$ is prime and
   $a$ is not divisible by $p$ then: ''}
 
 \begin{mdframed}
-  \centering
-  $a^{p - 1} \equiv 1 \Mod{p}$
+  \centering $a^{p - 1} \equiv 1 \Mod{p}$
 \end{mdframed}
 
 \subsubsection{Miller–Rabin}
