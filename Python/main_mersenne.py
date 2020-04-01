@@ -53,7 +53,9 @@ def driver():
 
 
 def primeTest(n):
-    millerRabin(n, 10)  # Algorithm change here
+    if smartBrute(n):  # Algorithm change here
+        return True
+    return False
 
 
 if __name__ == "__main__":
