@@ -172,18 +172,18 @@ of the other tests, is that it is deterministic.
 
 \subsubsection{Fermat}
 The Fermat primality test \cite{algh:fermat} is a probabilistic algorithm that
-resembles the Miller-Rabin test. The time complexity for the algorithm is $\mathcal{O}(k
-log^{2}n log log n log log log n)$. Although the long notation for the
-algorithm, the speed of the test can be compared to Lucas-Lehmer.
+resembles the Miller-Rabin test (\ref{miller}). The time complexity for the
+algorithm is \newline $\mathcal{O}(k
+\log^{2}N \log \log N \log \log \log N)$. The speed of the test can be compared to Lucas-Lehmer.
 
 Fermat's little theory \cite{fermat:little} states \textit{``If $p$ is prime and
-  $a$ is not divisible by $p$ then: ''}
-
+  $a$ is not divisible by $p$ then: ''} \newline
 \begin{mdframed}
   \centering $a^{p - 1} \equiv 1 \Mod{p}$
 \end{mdframed}
 
-\subsubsection{Miller–Rabin}
+
+\subsubsection{Miller–Rabin} \label{miller}
 The Miller-Rabin primality test \cite{algh:miller}, first discovered by Russian
 mathematician M. M. Artjuhov in 1967, is an algorithm that has two versions. One
 that is deterministic, and the other probabilistic. The deterministic version is
@@ -198,7 +198,7 @@ deterministic version. The probabilistic is therefore chosen for this study.
 \\*
 The Miller-Rabin primality test is considered to be one of the fastest
 algorithms to verify if an $n$ is prime or not. The time complexity for the
-probabilistic version is $\mathcal{O}(k log^{3}(n))$, where $k$ is the amount of rounds
+probabilistic version is $\mathcal{O}(k \log^{3}(n))$, where $k$ is the amount of rounds
 the algorithm will perform. \newline
 \\*
 insert how it works here
