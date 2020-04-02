@@ -78,11 +78,11 @@ largest factor for verifying primes faster are the \textit{algorithms}.
 Time complexity \cite{theorem:time_comp} is a concept within computer science,
 which describes the approximate time for a program to complete. The study will
 use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
-increases as the input size increases. For example, $O(N)$ will grow linearly
+increases as the input size increases. For example, $\mathcal{O}(N)$ will grow linearly
 with the input size. Increasing the input size by a factor of 10, will also
-increase the run time by a factor of 10, as such $O(10N)$. On the other hand,
-$O(log(n))$ grows logarithmically, which is far more efficient for bigger input
-sizes, as $O(log(N))$ is strictly smaller than $N$ for large enough values. The
+increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the other hand,
+$\mathcal{O}(log(n))$ grows logarithmically, which is far more efficient for bigger input
+sizes, as $\mathcal{O}(log(N))$ is strictly smaller than $N$ for large enough values. The
 base for logarithms in the Big O Notation is not relevant. The proof as to why
 the base is irrelevant will not be provided. \newline
 \\*
@@ -92,8 +92,8 @@ storing a number in an array. \newline
 \\*
 Since the Big O Notation denotes the growth of the runtime as
 $\lim_{N\to\infty}$, two notations can be added together rather easily. For
-example, a program that has two bits of codes, one with $O(N)$ and another with
-$O(N^{2})$, will have an overall time complexity of $O(N^{2})$ since $N^{2}$
+example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and another with
+$\mathcal{O}(N^{2})$, will have an overall time complexity of $\mathcal{O}(N^{2})$ since $N^{2}$
 dominates for large values of $N$. \newline
 \\*
 The Big O Notation will be used to determine whether an algorithm with a large
@@ -102,63 +102,6 @@ number, $n$, will succeed or run for a \textit{very long time}\footnote{Some
 Considering that the largest known prime is $24,862,048$ digits
 \cite{prime:largest_digits}, algorithms have to be efficient to perform a
 primality test.
-
-\newpage
-\subsubsection{Examples of Big O Notation}
-
-
-\begin{figure}[ht]
-  \begin{center}
-    \begin{tikzpicture}
-      \begin{axis}[ axis lines = left, ymin=0, ymax=50, xlabel = {}, ylabel =
-        {}, ]
-        \addplot [ domain=0:50, samples=100, color=red, ]{x};
-        \addlegendentry{$O(n)$}
-            
-        \addplot [ domain=0:50, samples=100, color=blue, ]{x^2};
-        \addlegendentry{$O(n^2)$}
-
-        \addplot [ domain=0:50, samples=100, color=green, ]{sqrt(x)};
-        \addlegendentry{$O(\sqrt{n})$}
-      \end{axis}
-    \end{tikzpicture}
-  \end{center}
-  \caption{The graph does a lot of stuff. The graph does a lot of stuff. The
-    graph does a lot of stuff. The graph does a lot of stuff. The graph does a
-    lot of stuff. The graph does a lot of stuff. The graph does a lot of stuff.}
-\end{figure}
-
-\noindent
-A program that runs in $O(N)$ would be a function that inputs an integer $N$ and
-outputs every number up to $N$. This runs in $O(N)$ time because it does $1+N$
-operations which results in $O(n)$:
-
-\begin{python}
-  def linearTime(N): for number in range(N): print(number)
-\end{python}
-\noindent
-Since the program runs in $O(N)$ time, increasing the input by a factor of $10$
-would also increase the number of operations done by a factor of $10$. \newline
-\\*
-The second example is a program that runs in quadratic time, $O(N^{2})$. Compared
-to the first example, this program will print every number up to $N$, $N$ times.
-
-\begin{python}
-  def quadraticTime(N): for number in range(N): for number in range(N):
-  print(number)
-\end{python}
-
-\vspace{5mm}
-\noindent
-The third program describes $O(\sqrt{n})$. It is a simple program that sums all
-numbers up to $\sqrt{N}$.
-
-\begin{python}
-  import math
-
-  def sqrtTime(N): sum = 0 for number in range(math.isqrt(N)): sum += number
-  print(sum)
-\end{python}
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a one-hundred percent definite test for primes, that
@@ -185,7 +128,7 @@ would make $p$ not a prime. However, if the loop completes without finding any
 divisors to $p$, then $p$ is prime. The brute force algorithm is a definite
 test, since it follows the definition of a prime; $p$ is prime if and only if
 there are no divisors except for 1 and $p$ itself. The algorithm's time
-complexity is $O(N)$, meaning it increases linearly. \newline
+complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
 
 \begin{python}
   Insert code here
@@ -194,40 +137,42 @@ complexity is $O(N)$, meaning it increases linearly. \newline
 \subsubsection{Smart Brute-force}
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
 By utilizing some properties of primes, the smart brute force has a time
-complexity of $O(\sqrt{n})$ compared to the $O(N)$ complexity from the brute
+complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$ complexity from the brute
 force.
 
-Since a prime can never have the factor $2$ in them, it is sufficient to
-only test odd numbers (an if statement is written before to loop to test if it
-has the factor $2$). On top of this, the smart brute force only
-tests numbers up to and including $\sqrt{p}$. This is because, assuming that $p$
-is composite, it must have at least 2 factors. If there exists a factor larger
-than $\sqrt{p}$, it must have already been tested. This algorithm will run in
-$O(\sqrt(n))$ time, which is much faster than the original brute force. \newline
+Since a prime can never have the factor $2$ in them, it is sufficient to only
+test odd numbers. Assuming that $p$ is a composite, it must have at least 2
+factors. Therefore, the smart brute force only tests numbers up to $\sqrt{p}$,
+since a factor larger than $\sqrt{p}$ must have already been tested. \newline
 
 \begin{python}
   Insert code here
 \end{python}
 
 \subsubsection{Lucas-Lehmer}
-The Lucas-Lehmer algorithm is a deterministic primality test that only works for
-Mersenne numbers. It takes advantage of a special property of Mersenne numbers:
+The Lucas-Lehmer algorithm \cite{algh:lucas} is a deterministic primality test
+that only works for Mersenne numbers. It takes advantage of the special
+properties of mersenne numbers: \newline
 
 \begin{mdframed}
-  For some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$ where
-  $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$.
+  For some $p>2$, $M_p=2^p-1$ is prime if $M_p$ divides $S_{p-2}$ where $S_0=4$ and
+  $S_k=(S_{k-1})^2-2$ for $k>0$.
 \end{mdframed}
 
-There exists a proof for this, which will not be covered by this essay. \newline
+\begin{center}
+  There exists a proof for this, which will not be covered.
+\end{center}
+\newline
 \\*
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
-Search) to find many of the largest primes known to man. This because the time
-complexity of this test is much faster compared to the other tests. Another
-advantage it has over some of the other tests, is that it is deterministic.
+Search) \cite{GIMPS} to find many of the largest primes known to man. This
+because the time complexity of the algorithm is much faster compared to the
+other algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$. Another advantage it has over some
+of the other tests, is that it is deterministic.
 
 \subsubsection{Fermat}
 The Fermat primality test \cite{algh:fermat} is a probabilistic algorithm that
-resembles the Miller-Rabin test. The time complexity for the algorithm is $O(k
+resembles the Miller-Rabin test. The time complexity for the algorithm is $\mathcal{O}(k
 log^{2}n log log n log log log n)$. Although the long notation for the
 algorithm, the speed of the test can be compared to Lucas-Lehmer.
 
@@ -253,7 +198,7 @@ deterministic version. The probabilistic is therefore chosen for this study.
 \\*
 The Miller-Rabin primality test is considered to be one of the fastest
 algorithms to verify if an $n$ is prime or not. The time complexity for the
-probabilistic version is $O(k log^{3}(n))$, where $k$ is the amount of rounds
+probabilistic version is $\mathcal{O}(k log^{3}(n))$, where $k$ is the amount of rounds
 the algorithm will perform. \newline
 \\*
 insert how it works here
