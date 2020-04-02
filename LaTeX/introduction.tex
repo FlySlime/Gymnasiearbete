@@ -2,22 +2,29 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\subsection{History}
-Prime numbers have been studied since Ancient Greece, and have, perhaps, been
-known to us for even longer. \cite{prime} Add more information
+Prime numbers are numbers that are only divisible by 1 and itself. Apart from
+being beautiful mathematically in a number of instances, prime numbers have some
+specific but important uses in everyday life. A common example is in
+RSA-encryption, where a product of two extremely large prime numbers is
+explioted for its toughness to factor, in order to encrypt messages that can
+only be decrypted by someone who has the key, i.e. one of the factors.
 
-\subsection{Aim}
-The purpose of this essay is to study how large prime number are found.
-Investigating all the aspects of prime numbers would be a near impossible task;
-therefore, this essay will focus more on learning about the methods and
-algorithms of finding new primes. The study will also present ways to prove that
-a given number, $n$, is indeed prime. \newline
-\\*
-The relevant questions for this study are the following:
+With the rise of more and more powerful computers, these factors are becoming
+easier to find, thus breaking the RSA-encryption. Therefore it is essential to
+find larger primes, to avoid breaking the RSA-encryption.
+
+Finding larger primes is however far from trivial. Since the largest primes
+known to man today has 24 862 048 digits, using easy methods we learn in school
+will not work, not even for the fastest computer on earth. Therefore, newer and
+efficient algorithms are of upmost importance.
+
+This study will focus on such algorithms, and compare them in their
+effectiveness of finding prime numbers. The following questions arise:
+
 \begin{enumerate}
-\item What methods can be used to find new primes?
 \item What are some algorithms for primality testing?
 \item Which algorithm is the most efficient and why?
+\item How far away from the current largest prime can we get?
 \end{enumerate}
 
 \end{document}
