@@ -27,8 +27,8 @@ primes in a unique way. This means that all natural numbers, except for $1$, has
 its own factorization containing only primes, unless it is a prime itself.
 \newline
 \\*
-For this study to be relevant, there has to be infinite amount of primes. There
-is an easy proof by contradiction for infinite primes:
+For this study to be relevant, there has to be an infinite amount of primes.
+There is an easy proof by contradiction for infinite primes:
 
 \begin{mdframed}
   Assume that there is a finite amount of primes and make a list of them:
@@ -84,7 +84,7 @@ increase the run time by a factor of 10, as such $O(10N)$. On the other hand,
 $O(log(n))$ grows logarithmically, which is far more efficient for bigger input
 sizes, as $O(log(N))$ is strictly smaller than $N$ for large enough values. The
 base for logarithms in the Big O Notation is not relevant. The proof as to why
-the base is irrelevant will not be provided by this study. \newline
+the base is irrelevant will not be provided. \newline
 \\*
 The amount of operations a modern computer can do is in the order of magnitude
 of $10^{9}$ per second. An operation is, for example, adding two numbers or
@@ -134,23 +134,18 @@ outputs every number up to $N$. This runs in $O(N)$ time because it does $1+N$
 operations which results in $O(n)$:
 
 \begin{python}
-  def linearTime(N):
-      for number in range(N):
-          print(number)
+  def linearTime(N): for number in range(N): print(number)
 \end{python}
 \noindent
 Since the program runs in $O(N)$ time, increasing the input by a factor of $10$
 would also increase the number of operations done by a factor of $10$. \newline
 \\*
-The second example is a program that runs in quadratic time, $O(N^{2})$.
-Compared to the first example, this program will print every number up to $N$,
-$N$ times.
+The second example is a program that runs in quadratic time, $O(N^{2})$. Compared
+to the first example, this program will print every number up to $N$, $N$ times.
 
 \begin{python}
-  def quadraticTime(N):
-      for number in range(N):
-          for number in range(N):
-              print(number)
+  def quadraticTime(N): for number in range(N): for number in range(N):
+  print(number)
 \end{python}
 
 \vspace{5mm}
@@ -161,55 +156,54 @@ numbers up to $\sqrt{N}$.
 \begin{python}
   import math
 
-  def sqrtTime(N):
-      sum = 0
-      for number in range(math.isqrt(N)):
-          sum += number
-          print(sum)
+  def sqrtTime(N): sum = 0 for number in range(math.isqrt(N)): sum += number
+  print(sum)
 \end{python}
 
 \subsection{Deterministic vs. Probabilistic}
-A deterministic test is a test that is a one-hundred percent definite test for
-primes, that gives no false positives. It either returns true if the number
-being tested if prime, or false if the number is not prime. \newline
+A deterministic test is a one-hundred percent definite test for primes, that
+gives no false positives. It either returns true if the number being tested if
+prime, or false if the number is not prime. \newline
 \\*
 Probabilistic tests differ from deterministic tests by having a stochastic,
-random, factor in them. They are not one-hundred percent definite and therefore
-sometimes will give false positives or negatives. An example of a probabilistic
-test for the number $p$ would be to test a random number below $p$ and see if it
-divides $p$ evenly. This test would give a lot of false positives, because even
-if $p$ is composite, not all numbers below it will divide it. The accuracy of
-the test, i.e. the probability that it returns a correct answer, could be
-increased by increasing the amount of unique factors tested. This will be an
-important fact in the Fermat and Miller-Rabin primality tests. There, the
-variable $k$ will be used to specify the number of rounds the test will run.
+random factor in them. They are not one-hundred percent definite and therefore
+sometimes will give false positives/negatives.
+
+An example of a probabilistic test for the number $p$ would be to test a random
+number below $p$ and see if it divides $p$ evenly. This test would give a lot of
+false positives, because even if $p$ is composite, not all numbers below it will
+divide it. The accuracy of the test, i.e. the probability that it returns a
+correct answer, is higher if there is an increased amount of unique factors,
+$k$, tested.
 
 \subsection{Algorithms}
 
-\subsubsection{Brute-force}
-The brute force method is arguably the simplest of all algorithms. This
-algorithm tests all the numbers, $n$, between $2$ and $p-1$ and checks if $n$
-satisfies $n \equiv 0 \Mod{p}$, which makes $n$ a divisor of $p$ and therefore
-$p$ is definitely not prime. If the loop, however, completes without finding any
-divisors of $p$, then $p$ is definitely prime. The pros of this method are that
-it is simple to understand, and that it is a definite test; $p$ is prime if and
-only if there are no divisors except for 1 and $p$ itself. The big con is that
-this algorithm is slow. It runs in $O(N)$ time which is the slowest of all
-algorithms which will be tested in this essay.
+\subsubsection{Brute-force} \label{brute} The brute force method tests all the
+integers, $n$, between $2$ and $p-1$ and checks if $n$ satisfies $n \equiv 0
+\Mod{p}$. If the condition is satisfied, $n$ would be a divisor of $p$ which
+would make $p$ not a prime. However, if the loop completes without finding any
+divisors to $p$, then $p$ is prime. The brute force algorithm is a definite
+test, since it follows the definition of a prime; $p$ is prime if and only if
+there are no divisors except for 1 and $p$ itself. The algorithm's time
+complexity is $O(N)$, meaning it increases linearly. \newline
 
 \begin{python}
   Insert code here
 \end{python}
 
 \subsubsection{Smart Brute-force}
-The smart brute force is also a brute force algorithm, but it utilizes some of
-the properties of primes. Since a prime can never have the factor $2$ in them,
-it is sufficient to only test $2$ and the odd numbers. On top of this, the smart
-brute force only tests numbers up to and including $\sqrt{p}$. This is because,
-assuming that $p$ is composite, it must have at least 2 factors. If there exists
-a factor larger than $\sqrt{p}$, it must have already been tested. This
-algorithm will run in $O(\sqrt(n))$ time, which is much faster than the original
-brute force.
+The smart brute force is a variant of the brute force algorithm (\ref{brute}).
+By utilizing some properties of primes, the smart brute force has a time
+complexity of $O(\sqrt{n})$ compared to the $O(N)$ complexity from the brute
+force.
+
+Since a prime can never have the factor $2$ in them, it is sufficient to
+only test odd numbers (an if statement is written before to loop to test if it
+has the factor $2$). On top of this, the smart brute force only
+tests numbers up to and including $\sqrt{p}$. This is because, assuming that $p$
+is composite, it must have at least 2 factors. If there exists a factor larger
+than $\sqrt{p}$, it must have already been tested. This algorithm will run in
+$O(\sqrt(n))$ time, which is much faster than the original brute force. \newline
 
 \begin{python}
   Insert code here
@@ -220,8 +214,8 @@ The Lucas-Lehmer algorithm is a deterministic primality test that only works for
 Mersenne numbers. It takes advantage of a special property of Mersenne numbers:
 
 \begin{mdframed}
-  For some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$
-  where $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$.
+  For some $p>2$, $M_p=2^p-1$ is prime if and only if $M_p$ divides $S_{p-2}$ where
+  $S_0=4$ and $S_k=(S_{k-1})^2-2$ for $k>0$.
 \end{mdframed}
 
 There exists a proof for this, which will not be covered by this essay. \newline
