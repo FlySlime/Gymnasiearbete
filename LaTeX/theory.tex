@@ -9,7 +9,7 @@ hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. If the
 number, $n$, is not prime, it is referred to as a \textit{composite number}.
 
 An exception to this definition is $1$, since it's the first natural number.
-Subsection \ref{arithmetic} provides a more in-depth definition of prime
+Subsection (\ref{arithmetic}) provides a more in-depth definition of prime
 numbers, and a mathematical explanation about why $1$ is not a prime number.
 
 \subsection{Mersenne Primes}
@@ -78,13 +78,14 @@ largest factor for verifying primes faster are the \textit{algorithms}.
 Time complexity \cite{theorem:time_comp} is a concept within computer science,
 which describes the approximate time for a program to complete. The study will
 use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
-increases as the input size increases. For example, $\mathcal{O}(N)$ will grow linearly
-with the input size. Increasing the input size by a factor of 10, will also
-increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the other hand,
-$\mathcal{O}(log(n))$ grows logarithmically, which is far more efficient for bigger input
-sizes, as $\mathcal{O}(log(N))$ is strictly smaller than $N$ for large enough values. The
-base for logarithms in the Big O Notation is not relevant. The proof as to why
-the base is irrelevant will not be provided. \newline
+increases as the input size increases. For example, $\mathcal{O}(N)$ will grow
+linearly with the input size. Increasing the input size by a factor of 10, will
+also increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the
+other hand, $\mathcal{O}(log(n))$ grows logarithmically, which is far more
+efficient for bigger input sizes, as $\mathcal{O}(log(N))$ is strictly smaller
+than $N$ for large enough values. The base for logarithms in the Big O Notation
+is not relevant. The proof as to why the base is irrelevant will not be
+provided. \newline
 \\*
 The amount of operations a modern computer can do is in the order of magnitude
 of $10^{9}$ per second. An operation is, for example, adding two numbers or
@@ -92,9 +93,9 @@ storing a number in an array. \newline
 \\*
 Since the Big O Notation denotes the growth of the runtime as
 $\lim_{N\to\infty}$, two notations can be added together rather easily. For
-example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and another with
-$\mathcal{O}(N^{2})$, will have an overall time complexity of $\mathcal{O}(N^{2})$ since $N^{2}$
-dominates for large values of $N$. \newline
+example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and
+another with $\mathcal{O}(N^{2})$, will have an overall time complexity of
+$\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$. \newline
 \\*
 The Big O Notation will be used to determine whether an algorithm with a large
 number, $n$, will succeed or run for a \textit{very long time}\footnote{Some
@@ -137,8 +138,8 @@ complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
 \subsubsection{Smart Brute-force}
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
 By utilizing some properties of primes, the smart brute force has a time
-complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$ complexity from the brute
-force.
+complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$
+complexity from the brute force.
 
 Since a prime can never have the factor $2$ in them, it is sufficient to only
 test odd numbers. Assuming that $p$ is a composite, it must have at least 2
@@ -167,14 +168,15 @@ properties of mersenne numbers: \newline
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
 Search) \cite{GIMPS} to find many of the largest primes known to man. This
 because the time complexity of the algorithm is much faster compared to the
-other algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$. Another advantage it has over some
-of the other tests, is that it is deterministic.
+other algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log
+N)$. Another advantage it has over some of the other tests, is that it is
+deterministic.
 
 \subsubsection{Fermat}
 The Fermat primality test \cite{algh:fermat} is a probabilistic algorithm that
 resembles the Miller-Rabin test (\ref{miller}). The time complexity for the
-algorithm is \newline $\mathcal{O}(k
-\log^{2}N \log \log N \log \log \log N)$. The speed of the test can be compared to Lucas-Lehmer.
+algorithm is \newline $\mathcal{O}(k \log^{2}N \log \log N \log \log \log N)$.
+The speed of the test can be compared to Lucas-Lehmer.
 
 Fermat's little theory \cite{fermat:little} states \textit{``If $p$ is prime and
   $a$ is not divisible by $p$ then: ''} \newline
@@ -183,23 +185,22 @@ Fermat's little theory \cite{fermat:little} states \textit{``If $p$ is prime and
 \end{mdframed}
 
 
-\subsubsection{Miller–Rabin} \label{miller}
-The Miller-Rabin primality test \cite{algh:miller}, first discovered by Russian
-mathematician M. M. Artjuhov in 1967, is an algorithm that has two versions. One
-that is deterministic, and the other probabilistic. The deterministic version is
-conditional, meaning that it relies on an unproven theorem, in this case, the
-extended Riemann hypothesis \cite{riemann}. However, the probabilistic version
-is unconditional, meaning that it does not depend on an unproven theorem. This
-makes the probabilistic version reliable. If the extended Riemann hypothesis
-were to be disproved, the deterministic version would fall apart. The
-probabilistic version is also faster for bigger $n$ compared to the
-deterministic version. The probabilistic is therefore chosen for this study.
-\newline
+\subsubsection{Miller–Rabin} \label{miller} The Miller-Rabin primality test
+\cite{algh:miller}, first discovered by Russian mathematician M. M. Artjuhov in
+1967, is an algorithm that has two versions. One that is deterministic, and the
+other probabilistic.
+
+The deterministic version is conditional, meaning that it relies on an unproven
+theorem, in this case, the extended Riemann hypothesis \cite{riemann}. On the
+other hand, the probabilistic version is unconditional, meaning that it does not
+depend on an unproven theorem. This makes the probabilistic version a more
+reliable primality test. If the extended Riemann hypothesis were to be
+disproved, the deterministic version would fall apart. The probabilistic version
+is also faster for bigger $n$ compared to the deterministic version. The
+probabilistic is therefore chosen for this study. \newline
 \\*
-The Miller-Rabin primality test is considered to be one of the fastest
-algorithms to verify if an $n$ is prime or not. The time complexity for the
-probabilistic version is $\mathcal{O}(k \log^{3}(n))$, where $k$ is the amount of rounds
-the algorithm will perform. \newline
+insert how it works here \newline
 \\*
-insert how it works here
+The time complexity for the probabilistic version is $\mathcal{O}(k
+\log^{3}(n))$, where $k$ is the amount of rounds the algorithm will perform.
 \end{document}
