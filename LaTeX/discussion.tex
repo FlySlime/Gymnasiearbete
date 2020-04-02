@@ -4,13 +4,39 @@
 Answeer questions
 Relate to time complexities
 Why k = 10?
-Were the answers expected?
 How could a future test be improved?
-Why could we not find the biggest mersenne prime?
-What order of magnitude are the numbers on?
 Why did the results in test 1 differ so much?
 What could our tests imply?
 Infuse results with meaning.
-Brute force will not finish until sun explodes
+Importance of results
+
+As showed in 4.2, the Brute-force was the slowest of all algorithms tested, and
+could only handle numbers up to the magnitude of $10^{9}$. This makes sense
+considering the time complexity, $O(n)$. Since a normal computer can do a little
+more than $10^{8}$ operations per second, a result of 280 seconds is expected.
+For the algorithm to finish $2^{61}-1$, it would take around $10^{10}$ seconds,
+which is more than 300 years. This demonstrates the fact that efficient
+algorithms must be found, as $O(n)$ grows linearly, it does not take much for
+the run time to exceed our lifetimes.
+
+The smart brute-force, with its time complexity of $O(sqrt(n))$, was
+considerably faster and completed $p=61$ in 100 seconds, rather than 300 years
+as in the case of the normal brute-force. However, this does not give the
+algorithm much hope, because $p=107$ exceeded the time limit of 120 seconds.
+
+On the other hand, Lucas-Lehmer could handle numbers up to $10^{6986}$. This is
+undoubtely better than the brute-forces, and shows how important it is to take
+advantage of the properties of Mersenne primes in order to make a much more
+efficient deterministic algorithm.
+
+Even though our results showed that these relatively simple algorithms could
+handle numbers on the order of magnitude of $10^{13394}$, this is far from the
+largest prime known to man. The reason behind this is the limitations of this
+essay. In order to find larger prime numbers than those tested in this essay,
+even more efficient algorithms must be used, as well as more powerful computers.
+However, these algorithms are incredibly hard to even understand, and are even
+harder to code.
+
+ 
 
 \end{document}
