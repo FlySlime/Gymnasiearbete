@@ -6,7 +6,7 @@
 Prime numbers are defined as \textit{positive integers} which only have the
 factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other
 hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. If the
-number, $n$, is not prime, it is referred to as a \textit{composite number}.
+number, $n$, is not prime, it is referred to as a \textit{composite number}. \\
 
 An exception to this definition is $1$, since it's the first natural number.
 Subsection (\ref{arithmetic}) provides a more in-depth definition of prime
@@ -24,7 +24,7 @@ normal integers.
 Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all
 integers greater than $1$ is either a prime, or can be expressed as a product of
 primes in a unique way. This means that all natural numbers, except for $1$, has
-its own factorization containing only primes, unless it is a prime itself.
+its own factorisation containing only primes, unless it is a prime itself.
 \newline
 \\*
 For this study to be relevant, there has to be an infinite amount of primes.
@@ -68,7 +68,6 @@ Graphing this function shows that primes become less common for greater $N$.
     of primes below it.}
 \end{figure}
 
-\noindent
 This proves that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
 largest factor for verifying primes faster are the \textit{algorithms}.
@@ -108,10 +107,10 @@ primality test.
 A deterministic test is a one-hundred percent definite test for primes, that
 gives no false positives. It either returns true if the number being tested if
 prime, or false if the number is not prime. \newline
-\\*
+
 Probabilistic tests differ from deterministic tests by having a stochastic,
 random factor in them. They are not one-hundred percent definite and therefore
-sometimes will give false positives/negatives.
+sometimes will give false positives/negatives. \\
 
 An example of a probabilistic test for the number $p$ would be to test a random
 number below $p$ and see if it divides $p$ evenly. This test would give a lot of
@@ -137,9 +136,9 @@ complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
 
 \subsubsection{Smart Brute-force}
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
-By utilizing some properties of primes, the smart brute force has a time
+By utilising some properties of primes, the smart brute force has a time
 complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$
-complexity from the brute force.
+complexity from the brute force. \\
 
 Since a prime can never have the factor $2$ in them, it is sufficient to only
 test odd numbers. Assuming that $p$ is a composite, it must have at least 2
@@ -160,47 +159,43 @@ properties of mersenne numbers: \newline
   $S_k=(S_{k-1})^2-2$ for $k>0$.
 \end{mdframed}
 
-\begin{center}
-  There exists a proof for this, which will not be covered.
-\end{center}
-\newline
-\\*
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
-Search) \cite{GIMPS} to find many of the largest primes known to man. This
-because the time complexity of the algorithm is much faster compared to the
-other algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log
-N)$. Another advantage it has over some of the other tests, is that it is
-deterministic.
+Search) \cite{GIMPS} to find many of the largest primes known. This because the
+time complexity of the algorithm is much faster compared to the other
+algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$.
 
-\subsubsection{Fermat}
-The Fermat primality test \cite{algh:fermat} is a probabilistic algorithm that
-resembles the Miller-Rabin test (\ref{miller}). The time complexity for the
-algorithm is \newline $\mathcal{O}(k \log^{2}N \log \log N \log \log \log N)$.
-The speed of the test can be compared to Lucas-Lehmer.
+\subsubsection{Fermat} \label{fermat} The Fermat primality test
+\cite{algh:fermat} is a probabilistic algorithm. It's whole concept is based on
+Fermat's little theory \cite{fermat:little} which states:
 
-Fermat's little theory \cite{fermat:little} states \textit{``If $p$ is prime and
-  $a$ is not divisible by $p$ then: ''} \newline
 \begin{mdframed}
-  \centering $a^{p - 1} \equiv 1 \Mod{p}$
+  \begin{center}
+    If $p$ is prime and $a$ is not divisible by $p$ then: \\
+    $a^{p - 1} \equiv 1 \Mod{p}$
+  \end{center}
 \end{mdframed}
 
+To implement the Fermat test, the code randomises an integer for $a$ and checks
+if it agrees with the theory. If it does not, then $p$ cannot be prime. However
+if it does, then it is \emph{probably} prime. The accuracy of the test is higher
+if it tries more than one $a$. In the code the amount of \emph{rounds} is
+determined with the variable $k$. The time complexity for the algorithm is
+$\mathcal{O}(k \log^{2}N \log \log N \log \log \log N)$. The speed of the test
+can be compared to Lucas-Lehmer.
 
-\subsubsection{Miller–Rabin} \label{miller} The Miller-Rabin primality test
-\cite{algh:miller}, first discovered by Russian mathematician M. M. Artjuhov in
-1967, is an algorithm that has two versions. One that is deterministic, and the
-other probabilistic.
+\subsubsection{Miller–Rabin} The Miller-Rabin primality test \cite{algh:miller},
+first discovered by Russian mathematician M. M. Artjuhov in 1967, is based on
+the Fermat test (\ref{fermat}) and has two variants. One that is deterministic, and the other probabilistic. \\
 
 The deterministic version is conditional, meaning that it relies on an unproven
 theorem, in this case, the extended Riemann hypothesis \cite{riemann}. On the
 other hand, the probabilistic version is unconditional, meaning that it does not
 depend on an unproven theorem. This makes the probabilistic version a more
 reliable primality test. If the extended Riemann hypothesis were to be
-disproved, the deterministic version would fall apart. The probabilistic version
-is also faster for bigger $n$ compared to the deterministic version. The
-probabilistic is therefore chosen for this study. \newline
-\\*
-insert how it works here \newline
-\\*
+disproved, the deterministic version would fall apart. The probabilistic variant
+is also faster for bigger $n$ compared to the deterministic version. For these
+reasons, the probabilistic version is chosen for this study. \newline
+
 The time complexity for the probabilistic version is $\mathcal{O}(k
 \log^{3}(n))$, where $k$ is the amount of rounds the algorithm will perform.
 \end{document}

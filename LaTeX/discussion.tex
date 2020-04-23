@@ -1,12 +1,12 @@
 % !TEX root = ./main.tex
 \documentclass[main.tex]{subfiles}
 \begin{document}
-Answeer questions
-Why k = 10?
-How could a future test be improved?
-What could our tests imply?
-Infuse results with meaning.
-Importance of results.
+% Answer questions
+% Why k = 10?
+% How could a future test be improved?
+% What could our tests imply?
+% Infuse results with meaning.
+% Importance of results.
 
 As showed in 4.2, the Brute-force was the slowest of all algorithms tested, and
 could only handle numbers up to the magnitude of $10^{9}$. This makes sense
@@ -15,50 +15,47 @@ more than $10^{8}$ operations per second, a result of 280 seconds is expected.
 For the algorithm to finish $2^{61}-1$, it would take around $10^{10}$ seconds,
 which is more than 300 years. This demonstrates the fact that efficient
 algorithms must be found, as $O(n)$ grows linearly, it does not take much for
-the run time to exceed our lifetimes.
+the run time to exceed our lifetimes. \\
 
 The smart brute-force, with its time complexity of $O(sqrt(n))$, was
 considerably faster and completed $p=61$ in 100 seconds, rather than 300 years
 as in the case of the normal brute-force. However, this does not give the
-algorithm much hope, because $p=107$ exceeded the time limit of 120 seconds.
+algorithm much hope, because $p=107$ exceeded the time limit of 120 seconds. \\
 
 On the other hand, Lucas-Lehmer could handle numbers up to $10^{6986}$. This is
-undoubtely better than the brute-forces, and shows how important it is to take
+undoubtedly better than the brute-forces, and shows how important it is to take
 advantage of the properties of Mersenne primes in order to make a much more
-efficient deterministic algorithm. 
+efficient deterministic algorithm. \\
 ﻿
 Even though our results showed that these relatively simple algorithms could
-handle numbers on the order of magnitude of $10^{13394}$, this is far from the
+handle numbers on the order of magnitude of $10^{13,394}$, this is far from the
 largest prime known to man. The reason behind this is the limitations of this
 essay. In order to find larger prime numbers than those tested in this essay,
 even more efficient algorithms must be used, as well as more powerful computers.
 However, these algorithms are incredibly hard to even understand, and are even
-harder to code.
+harder to code. \\
 
 Overall, the algorithms tested correlate well to their respective big O
 notation. However, there is still a non-negligible variance. This is especially
 shown in test 4.1 where all of the different sub-tests for each algorithm
 yielded different numbers. The explanation for this phenomena is that the
 performance of a computer is not constant. The change of CPU temperature, clock
-speed and prioritization of processes within the operating system, all lead to
+speed and prioritisation of processes within the operating system, all lead to
 change in performance. These factors are all beyond the control of the user. In
-hindsight, it would be wise to have several sub-tests in 4.2 aswell, since it
+hindsight, it would be wise to have several sub-tests in 4.2 as-well, since it
 was clearly shown that performance fluctuates over time, and that the tests done
 in 4.2 therefore are not reliable. This is something that should be done if this
-study were to ever be re-done. 
+study were to ever be re-done. \\
 
 The most efficient algorithm which was tested by this study was the Fermat
-primality test, as shown in 4.2. It could handle $2^{44497}-1$. This is however
-nowhere near the current largest prime, $2^{82589933}-1$. There are several
+primality test, as shown in 4.2. It could handle $2^{44,497}-1$. This is however
+nowhere near the current largest prime, $2^{82,589,933}-1$. There are several
 different reasons for this. The current largest prime was not even found using
 the Fermat primality test. The algorithm used to find this large number is
 extremely complicated and is far beyond the scope of this study, since it
 requires a ph.D. to even understand. Even if the Fermat primality test were used
 to find this large prime, we would not be able to recreate it. The laptop used
 in this study is nothing compared to the GIMPS coalition of many computers, each
-one of them more powerful than this laptop. 
-
-
- 
+one of them more powerful than this laptop. \\
 
 \end{document}
