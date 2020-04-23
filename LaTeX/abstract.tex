@@ -2,26 +2,28 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-Prime numbers are a fundamental part of number theory. They have many important
-properties and it is therefore of some number theorists interests to find larger
-and larger primes. In order to accomplish this, efficient algorithms have to be
-developed. This study investigates the efficiency of five common primality
-testing algorithms: Brute-force, Smart Brute-force, Lucas-Lehmer, Fermat and
-Miller-Rabin. Two different tests were performed to compare the algorithms. \\
+Prime numbers are a fundamental part of number theory. Large primes contain
+valuable properties that can be exploited, therefore it is in the interest of
+number theorists to find these primes. In order to accomplish this, efficient
+algorithms have to be developed. This study investigates the efficiency of five
+common primality testing algorithms: Brute-force, Smart Brute-force,
+Lucas-Lehmer, Fermat and Miller-Rabin. Two different tests were performed to
+compare the algorithms. \\
 
 In the first test, the algorithms were given the task of finding the largest
-prime number within $60$ seconds by looping the natural numbers from $2$. The
-first test could not include Lucas-Lehmer, as it only works for mersenne numbers. \\
+prime number within $60$ seconds. The test is performed by looping through the
+natural numbers starting from $2$. The first test could not include
+Lucas-Lehmer, as it only works for mersenne numbers. \\
 
 In the second test, the algorithms were given mersenne primes of different sizes
 and returned the time it took for them to finish verifying that it was indeed a
 prime. However, if the time exceeded $120$ seconds, the test case would be
-deemed as a ``failure'' and immediately end the program. These tests showed that
-the Fermat primality test was the fastest algorithm to find primes, albeit probabilistic. \\
+deemed as a ``failure'' and immediately end the program. These tests concluded
+that the Fermat primality test was the fastest algorithm to find primes, albeit
+probabilistic. The other alternative being the deterministic algorithm, Lucas-Lehmer. \\
 
-This study has little to no use in actually finding new primes, as much more
-efficient algorithms are currently used for this purpose. However, this study
-can be used to demonstrate the correlation between the big O notation and
-runtimes, as-well as giving an introduction to primality testing algorithms. \\
+The purpose of this study is not to find newer primes, but rather to demonstrate
+the correlation between the big O notation and runtimes, as-well as giving an
+introduction to primality testing algorithms. \\
 
 \end{document}

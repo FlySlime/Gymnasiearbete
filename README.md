@@ -1,7 +1,8 @@
 # Prime Numbers - Gymnasiearbete
 
 main.pdf can be found in LaTeX/
-DESCRIPTION HERE LATER
+
+Insert abstract here soon
 
 ## Built With
 
