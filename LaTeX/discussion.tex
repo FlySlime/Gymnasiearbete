@@ -46,8 +46,8 @@ was clearly shown that performance fluctuates over time, and that the tests done
 in 4.2 therefore are not reliable. This is something that should be done if this
 study were to ever be re-done. \\
 
-The most efficient algorithm which was tested by this study was the Fermat
-primality test, as shown in 4.2. It could handle $2^{44,497}-1$. This is however
+The most efficient algorithm which was tested by this study was the Lucas-Lehmer
+algorithm, as shown in 4.2. It could handle $2^{44,497}-1$. This is however
 nowhere near the current largest prime, $2^{82,589,933}-1$. There are several
 different reasons for this. The current largest prime was not even found using
 the Fermat primality test. The algorithm used to find this large number is
@@ -57,7 +57,7 @@ to find this large prime, we would not be able to recreate it. The laptop used
 in this study is nothing compared to the GIMPS coalition of many computers, each
 one of them more powerful than this laptop. \\
 
-A future test in regarding this subject could be improved by testing different
+A future test regarding this subject could be improved by testing different
 values for the constant $k$ and exploring how these different values would
 affect the run times of the probabilistic algorithms. Another area of
 improvement would be to increase the number of test cases in both 4.1 and 4.2 in
@@ -69,7 +69,7 @@ not accurate at all. \\
 The constant $k$ was chosen to be $10$, which is a relatively arbitrary number.
 Research on the internet did not yield a definite answer as to what value $k$
 should have. Some algorithms had $k = 3$ while others had $k = 10$. The run
-times of the algorithms are proportional to this $k$ constant. Therefore,
+times of the probabilistic algorithms are proportional to this $k$ constant. Therefore,
 testing different values of $k$ for each algorithm would be essential to
 determine the actual efficiency of the probabilistic algorithms. Another aspect
 of having an arbitrary $k$ is that the accuracy of the tests might be impeded.
