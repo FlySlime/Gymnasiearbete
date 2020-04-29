@@ -2,28 +2,40 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-Prime numbers are a fundamental part of number theory. Large primes contain
-valuable properties that can be exploited, therefore it is in the interest of
-number theorists to find these primes. In order to accomplish this, efficient
-algorithms have to be developed. This study investigates the efficiency of five
-common primality testing algorithms: Brute-force, Smart Brute-force,
-Lucas-Lehmer, Fermat and Miller-Rabin. Two different tests were performed to
-compare the algorithms. \\
+Prime numbers are a fundamental part of number theory. Primes have many special
+properties that can be exploited. Perhaps, the most important use is in
+RSA-encryption which relies upon the toughness to factor a number consiting of
+the product of two large primes. The rise of more powerful computers has
+increased the threshold for how large numbers a computer can handle. Therefore
+it is of a computer scientist's interest to find and verify larger and larger
+primes. In ordet to accomplish this, efficient algorithms have to be developed. \\
+
+This study investigates the efficiency of five simple primality testing
+algorithms:
+\begin{itemize}
+  \item Brute-force
+  \item Smart brute-force
+  \item Lucas-Lehmer
+  \item Miller-Rabin
+  \item Fermat primality test
+\end{itemize}
 
 In the first test, the algorithms were given the task of finding the largest
-prime number within $60$ seconds. The test is performed by looping through the
-natural numbers starting from $2$. The first test could not include
-Lucas-Lehmer, as it only works for mersenne numbers. \\
+prime number within $60$ seconds. The test was performed by looping through the
+natural numbers starting from $2$, and calling the primeTest function for every
+number in the loop, as long as the time limit was not exceeded. The largest
+number tested until the program terminated was the result of the test case. This
+test did not inclue Lucas-Lehmer, as it only works for mersenne numbers. \\
 
 In the second test, the algorithms were given mersenne primes of different sizes
 and returned the time it took for them to finish verifying that it was indeed a
 prime. However, if the time exceeded $120$ seconds, the test case would be
-deemed as a ``failure'' and immediately end the program. These tests concluded
-that Lucas-Lehmer was the fastest algorithm to find primes. The other
-alternative being the Fermat primality test, with the drawback of being probabilistic. \\
+deemed as a ``failure'' and immediately end the program. \\
 
-The purpose of this study is not to find newer primes, but rather to demonstrate
-the correlation between the big O notation and runtimes, as-well as giving an
-introduction to primality testing algorithms. \\
+In the first test, the Fermat primality testing algorithm could find the largest
+primes within the time limit, thus concluding that it was the fastest algorithm
+out of the ones tested. In the second test, however, Lucas-Lehmer was the
+fastest out of all algorithms, thereby concluding that it is the fastest
+algorithm of all five. 
 
 \end{document}

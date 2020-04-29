@@ -2,22 +2,23 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-Prime numbers are a beautiful mathematical concept. Out of all other numbers,
-primes have had an invaluable importance to our lives. The most common example
-being RSA-encryption \cite{rsa}, where a product of two \emph{extremely} large primes are
-exploited for its toughness to factor. In order to decrypt the message, one
-would need to have one of the factors. \\
+Prime numbers are mathematically beautiful. Primes have many uses in everyday
+lift, even though we might not think about it that ofte. The most common example
+is in RSA-encryption \cite{rsa}, where a product of two \emph{extremely} large primes are
+exploited for its toughness to factor. However, if one of the factors in known,
+it is easy to find the other. If no factors are known, you would need to factor
+the prime youself which is practically impossible.\\
 
 With the rise of more and more powerful computers, these factors are becoming
 easier to find, thus breaking the weaker RSA-encryption. Therefore it
 is essential to find larger primes. \\
 
 Finding larger primes is however far from trivial. Since the largest prime known
-to man has $24,862,048$ digits \cite{prime:largest_digits}. Using a method
-that \emph{Checks all numbers below n} is simply not efficient enough for large
+to man has $24,862,048$ digits \cite{prime:largest_digits}, using a method
+that \emph{Checks all numbers below n} is simply not fast enough for large
 primes. \\
 
-The study will focus on efficient algorithms for finding primes, and compare
+This study will focus on five simple algorithms for finding primes, and compare
 them. The following questions arise:
 
 \begin{enumerate}

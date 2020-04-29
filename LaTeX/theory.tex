@@ -8,16 +8,16 @@ factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other
 hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. If the
 number, $n$, is not prime, it is referred to as a \textit{composite number}. \\
 
-An exception to this definition is $1$, since it's the first natural number.
+An exception to this definition is $1$, since it is the first natural number.
 Subsection (\ref{arithmetic}) provides a more in-depth definition of prime
 numbers, and a mathematical explanation about why $1$ is not a prime number.
 
 \subsection{Mersenne Primes}
 A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a
 prime number. An example of this is $2^5-1$ which equals to the prime number
-$127$. The eight largest prime numbers, as of writing this, are mersenne primes
+$127$. The eight largest prime numbers, as of writing this, are all mersenne primes
 \cite{prime:largest_digits}. The reason being because of their easily
-exploitable properties by computers, making them faster to primality test than
+exploitable properties by computers, making them faster to test for primality than
 normal integers.
 
 \subsection{The Fundamental Theory of Arithmetic} \label{arithmetic} The
@@ -27,8 +27,8 @@ primes in a unique way. This means that all natural numbers, except for $1$, has
 its own factorisation containing only primes, unless it is a prime itself.
 \newline
 \\*
-For this study to be relevant, there has to be an infinite amount of primes.
-There is an easy proof by contradiction for infinite primes:
+This study relies on the fact that there is an infinite amount of primes. The
+proof for this is a simple proof by contradiction:
 
 \begin{mdframed}
   Assume that there is a finite amount of primes and make a list of them:
@@ -70,7 +70,7 @@ Graphing this function shows that primes become less common for greater $N$.
 
 This proves that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
-largest factor for verifying primes faster are the \textit{algorithms}.
+largest factor in verifying primes faster are the \textit{algorithms}.
 
 \subsection{Time Complexity}
 
@@ -96,12 +96,10 @@ example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and
 another with $\mathcal{O}(N^{2})$, will have an overall time complexity of
 $\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$. \newline
 \\*
-The Big O Notation will be used to determine whether an algorithm with a large
-number, $n$, will succeed or run for a \textit{very long time}\footnote{Some
-  programs will not finish until the sun explodes, which is quite impractical.}.
-Considering that the largest known prime is $24,862,048$ digits
-\cite{prime:largest_digits}, algorithms have to be efficient to perform a
-primality test.
+
+The big O notation will be used by this study to explain why some algorithms are
+faster than others. This is further dicussed in the discussion.
+\\*
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a one-hundred percent definite test for primes, that
@@ -114,7 +112,7 @@ sometimes will give false positives/negatives. \\
 
 An example of a probabilistic test for the number $p$ would be to test a random
 number below $p$ and see if it divides $p$ evenly. This test would give a lot of
-false positives, because even if $p$ is composite, not all numbers below it will
+false positives, because even if $p$ were to be composite, not all numbers below it will
 divide it. The accuracy of the test, i.e. the probability that it returns a
 correct answer, is higher if there is an increased amount of unique factors,
 $k$, tested.
@@ -143,7 +141,8 @@ complexity from the brute force. \\
 Since a prime can never have the factor $2$ in them, it is sufficient to only
 test odd numbers. Assuming that $p$ is a composite, it must have at least 2
 factors. Therefore, the smart brute force only tests numbers up to $\sqrt{p}$,
-since a factor larger than $\sqrt{p}$ must have already been tested. \newline
+since if a factor larger than $\sqrt{p}$ were to be found, the others must have
+already been tested. \newline
 
 \begin{python}
   Insert code here
@@ -160,12 +159,12 @@ properties of mersenne numbers: \newline
 \end{mdframed}
 
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
-Search) \cite{GIMPS} to find many of the largest primes known. This because the
+Search) \cite{GIMPS} to find many of the largest primes known. This is because the
 time complexity of the algorithm is much faster compared to the other
 algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$.
 
 \subsubsection{Fermat} \label{fermat} The Fermat primality test
-\cite{algh:fermat} is a probabilistic algorithm. It's whole concept is based on
+\cite{algh:fermat} is a probabilistic algorithm. Its whole concept is based on
 Fermat's little theory \cite{fermat:little} which states:
 
 \begin{mdframed}
