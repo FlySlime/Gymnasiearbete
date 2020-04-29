@@ -15,10 +15,10 @@ numbers, and a mathematical explanation about why $1$ is not a prime number.
 \subsection{Mersenne Primes}
 A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a
 prime number. An example of this is $2^5-1$ which equals to the prime number
-$127$. The eight largest prime numbers, as of writing this, are all mersenne primes
+$127$. The eight largest prime numbers are mersenne primes
 \cite{prime:largest_digits}. The reason being because of their easily
-exploitable properties by computers, making them faster to test for primality than
-normal integers.
+exploitable properties by computers, making them faster to test for primality
+than normal integers.
 
 \subsection{The Fundamental Theory of Arithmetic} \label{arithmetic} The
 Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all
@@ -70,7 +70,7 @@ Graphing this function shows that primes become less common for greater $N$.
 
 This proves that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
-largest factor in verifying primes faster are the \textit{algorithms}.
+largest factor for verifying primes faster are the \textit{algorithms}.
 
 \subsection{Time Complexity}
 
@@ -94,12 +94,7 @@ Since the Big O Notation denotes the growth of the runtime as
 $\lim_{N\to\infty}$, two notations can be added together rather easily. For
 example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and
 another with $\mathcal{O}(N^{2})$, will have an overall time complexity of
-$\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$. \newline
-\\*
-
-The big O notation will be used by this study to explain why some algorithms are
-faster than others. This is further dicussed in the discussion.
-\\*
+$\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$. 
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a one-hundred percent definite test for primes, that
@@ -112,10 +107,10 @@ sometimes will give false positives/negatives. \\
 
 An example of a probabilistic test for the number $p$ would be to test a random
 number below $p$ and see if it divides $p$ evenly. This test would give a lot of
-false positives, because even if $p$ were to be composite, not all numbers below it will
-divide it. The accuracy of the test, i.e. the probability that it returns a
-correct answer, is higher if there is an increased amount of unique factors,
-$k$, tested.
+false positives, because even if $p$ were to be composite, not all numbers below
+it will divide it. The accuracy of the test, i.e. the probability that it
+returns a correct answer, is higher if there is an increased amount of unique
+factors, $k$, tested.
 
 \subsection{Algorithms}
 
@@ -159,12 +154,12 @@ properties of mersenne numbers: \newline
 \end{mdframed}
 
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
-Search) \cite{GIMPS} to find many of the largest primes known. This is because the
-time complexity of the algorithm is much faster compared to the other
+Search) \cite{GIMPS} to find many of the largest primes known. This is because
+the time complexity of the algorithm is much faster compared to the other
 algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$.
 
 \subsubsection{Fermat} \label{fermat} The Fermat primality test
-\cite{algh:fermat} is a probabilistic algorithm. Its whole concept is based on
+\cite{algh:fermat} is a probabilistic algorithm. It's whole concept is based on
 Fermat's little theory \cite{fermat:little} which states:
 
 \begin{mdframed}
