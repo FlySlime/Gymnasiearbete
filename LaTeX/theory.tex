@@ -123,9 +123,7 @@ test, since it follows the definition of a prime; $p$ is prime if and only if
 there are no divisors except for 1 and $p$ itself. The algorithm's time
 complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
 
-\begin{python}
-  Insert code here
-\end{python}
+\lstinputlisting[language=python]{../Python/brute.py}
 
 \subsubsection{Smart Brute-force}
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
@@ -139,9 +137,7 @@ factors. Therefore, the smart brute force only tests numbers up to $\sqrt{p}$,
 since if a factor larger than $\sqrt{p}$ were to be found, the others must have
 already been tested. \newline
 
-\begin{python}
-  Insert code here
-\end{python}
+\lstinputlisting[language=python]{../Python/smartbrute.py}
 
 \subsubsection{Lucas-Lehmer}
 The Lucas-Lehmer algorithm \cite{algh:lucas} is a deterministic primality test
@@ -156,11 +152,9 @@ properties of mersenne numbers: \newline
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
 Search) \cite{GIMPS} to find many of the largest primes known. This is because
 the time complexity of the algorithm is much faster compared to the other
-algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$.
+algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$. \\
 
-\begin{python}
-  Insert code here
-\end{python}
+\lstinputlisting[language=python]{../Python/lucas.py}
 
 \subsubsection{Fermat} \label{fermat} The Fermat primality test
 \cite{algh:fermat} is a probabilistic algorithm. It's whole concept is based on
@@ -179,11 +173,9 @@ if it does, then it is \emph{probably} prime. The accuracy of the test is higher
 if it tries more than one $a$. In the code the amount of \emph{rounds} is
 determined with the variable $k$. The time complexity for the algorithm is
 $\mathcal{O}(k \log^{2}N \log \log N \log \log \log N)$. The speed of the test
-can be compared to Lucas-Lehmer.
+can be compared to Lucas-Lehmer.  \\
 
-\begin{python}
-  Insert code here
-\end{python}
+\lstinputlisting[language=python]{../Python/fermat.py}
 
 \subsubsection{Miller–Rabin} The Miller-Rabin primality test \cite{algh:miller},
 first discovered by Russian mathematician M. M. Artjuhov in 1967, is based on
@@ -199,10 +191,8 @@ is also faster for bigger $n$ compared to the deterministic version. For these
 reasons, the probabilistic version is chosen for this study. \newline
 
 The time complexity for the probabilistic version is $\mathcal{O}(k
-\log^{3}(n))$, where $k$ is the amount of rounds the algorithm will perform.
+\log^{3}(n))$, where $k$ is the amount of rounds the algorithm will perform. \\
 
-\begin{python}
-  Insert code here
-\end{python}
+\lstinputlisting[language=python]{../Python/milrab.py}
 
 \end{document}

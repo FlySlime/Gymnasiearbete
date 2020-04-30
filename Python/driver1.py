@@ -11,10 +11,10 @@ import time
 
 # from FILE import FUNCTION
 from brute import brute
-from smart_brute import smartBrute
+from smartbrute import smartBrute
 from lucas import lehmer
 from fermat import fermat
-from mil_rab import millerRabin
+from milrab import millerRabin
 
 
 def driver():
@@ -23,7 +23,6 @@ def driver():
     timelimit = time.time() + 60  # 60 seconds
     while time.time() < timelimit:
         if primeTest(n):
-            # Make sure the prime was still within the timelimit
             if time.time() < timelimit:
                 primes.append(n)
             else:

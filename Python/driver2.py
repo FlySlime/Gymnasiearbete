@@ -13,10 +13,10 @@ import time
 
 # from FILE import FUNCTION
 from brute import brute
-from smart_brute import smartBrute
+from smartbrute import smartBrute
 from lucas import lehmer
 from fermat import fermat
-from mil_rab import millerRabin
+from milrab import millerRabin
 
 
 def driver():
@@ -43,12 +43,14 @@ def driver():
         primeTest(pow(2, n) - 1)
         if timelimit > time.time():
             print(
-                str(n) + ": O\nTime: " + str(time.time() - start) +
-                " seconds\n")
+                  str(n) + ": O\nTime: " +
+                  str(time.time() - start) + " seconds\n"
+                 )
         else:
             print(
-                str(n) + ": X\nTime: " + str(time.time() - start) +
-                " seconds\n")
+                  str(n) + ": X\nTime: " +
+                  str(time.time() - start) + " seconds\n"
+                 )
             return
 
 
