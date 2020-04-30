@@ -2,22 +2,28 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-Overall, the fastest algorithm was Lucas-Lehmer, closely followed by the Fermat
-primality test. The reason Lucas-Lehmer was the best is because it exploits the
-properties of Mersenne primes. However, it is impossible to draw a good
-conclusion regarding which algorithm is the most efficient. This is because of
-the method flaws, such as not testing different values of $k$ and having too few
-test cases in both tests. This would need to be improved
-should the same tests be conducted again. \\
+To conclude, the fastest algorithm was Lucas-Lehmer, closely followed by the
+Fermat primality test. Lucas-Lehmer averaged better since it specialises in
+Mersenne primes, and therefore larger numbers. It is hard to determine which
+algorithm was most efficient because of this reason. The algorithms specialise
+in something different, i.e. the Fermat primality test was fast, with the
+drawback of being probabilistic. Fermat and Miller-Rabin also depend on the
+different values of $k$, giving an error in the methods; \emph{should one
+  sacrifice accuracy for speed}? \\
 
-It was concluded that we could not get anywhere close to the current largest
-prime because this study did not include more efficient tests, as well as the
-limitations of the computer. \\
+The study could not get near the largest prime number. The three factors for
+this being:
 
-Even though the tests conducted can be deemed as failures because of the method
-flaws, this study still accomplishes its goal, namely to give the authors an
-introduction to applied programming and number theory. This study should not be
-used for scientists to expand their knowledge, but rather for young people as an
-introduction to aforementioned subjects.
+\begin{enumerate}
+\item The \textbf{algorithms} chosen were not efficient enough, but rather to be
+  simple
+\item \textbf{Computational} power was lacking
+\item There wasn't enough \textbf{time}
+\end{enumerate}
+
+The study accomplished its goal, to give an introduction to applied programming
+and number theory. It is not intended for scientists, mathematicians or experts
+in this field, instead it it should be used to introduce students or interested
+individuals to the aforementioned subjects.
 
 \end{document}
