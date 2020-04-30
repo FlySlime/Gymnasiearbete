@@ -1,17 +1,15 @@
 % !TEX root = ./main.tex
 \documentclass[main.tex]{subfiles}
 \begin{document}
-% Answer questions
-% Why k = 10?
-% What could our tests imply?
-% Importance of results.
+% Answer questions Why k = 10? What could our tests imply? Importance of
+% results.
 
-As showed in both tests, the Brute-force was the slowest of all algorithms tested, and
-could only handle numbers up to the magnitude of $10^{9}$. This makes sense
-considering the time complexity, $O(n)$. Since a normal computer can do a little
-more than $10^{8}$ operations per second, a result of 280 seconds is expected.
-For the algorithm to finish $2^{61}-1$, it would take around $10^{10}$ seconds,
-which is more than 300 years. This demonstrates the fact that efficient
+As showed in both tests, the Brute-force was the slowest of all algorithms
+tested, and could only handle numbers up to the magnitude of $10^{9}$. This
+makes sense considering the time complexity, $O(n)$. Since a normal computer can
+do a little more than $10^{8}$ operations per second, a result of 280 seconds is
+expected. For the algorithm to finish $2^{61}-1$, it would take around $10^{10}$
+seconds, which is more than 300 years. This demonstrates the fact that efficient
 algorithms must be found. As $O(n)$ grows linearly, it does not take much for
 the run time to exceed our lifetimes. \\
 
@@ -21,12 +19,10 @@ as in the case of the normal brute-force. However, this does not give the
 algorithm much hope, because $p=107$ exceeded the time limit of 120 seconds. \\
 
 On the other hand, Lucas-Lehmer could handle $2^{44497}$, which is approximately
-equal to $10^{13394}$. This is
-undoubtedly better than both brute-forces, and shows how important it is to take
-advantage of the properties of Mersenne primes in order to make a much more
-efficient deterministic algorithm. \\
-﻿
-Even though the results showed that these relatively simple algorithms could
+equal to $10^{13394}$. This is undoubtedly better than both brute-forces, and
+shows how important it is to take advantage of the properties of Mersenne primes
+in order to make a much more efficient deterministic algorithm. \\
+﻿ Even though the results showed that these relatively simple algorithms could
 handle numbers on the order of magnitude of $10^{13,394}$, this is far from the
 largest prime known to man. The reason behind this is the limitations of this
 essay. In order to find larger prime numbers than those tested in this essay,
@@ -50,11 +46,12 @@ The most efficient algorithm which was tested by this study was the Lucas-Lehmer
 algorithm, as shown in 4.2. It could handle $2^{44,497}-1$. This is however
 nowhere near the current largest prime, $2^{82,589,933}-1$. There are several
 different reasons for this. The current largest prime was not even found using
-the Fermat primality test. The algorithm used to find this large number is
-a more optimized version of the Lucas-Lehmer. This version is extremely complicated and is far beyond the scope of this study, since it
-requires a ph.D. to even understand. Even if the Fermat primality test were used
-to find this large prime, we would not be able to recreate it. The laptop used
-in this study is nothing compared to the GIMPS coalition of many computers, each
+the Fermat primality test. The algorithm used to find this large number is a
+more optimised version of the Lucas-Lehmer. This version is extremely
+complicated and is far beyond the scope of this study, since it requires a ph.D.
+to even understand. Even if the Fermat primality test were used to find this
+large prime, we would not be able to recreate it. The laptop used in this study
+is nothing compared to the GIMPS coalition of many computers, each
 one of them more powerful than this laptop. \\
 
 A future test regarding this subject could be improved by testing different
@@ -69,12 +66,12 @@ not accurate at all. \\
 The constant $k$ was chosen to be $10$, which is a relatively arbitrary number.
 Research on the internet did not yield a definite answer as to what value $k$
 should have. Some algorithms had $k = 3$ while others had $k = 10$. The run
-times of the probabilistic algorithms are proportional to this $k$ constant. Therefore,
-testing different values of $k$ for each algorithm would be essential to
-determine the actual efficiency of the probabilistic algorithms. Another aspect
-of having an arbitrary $k$ is that the accuracy of the tests might be impeded.
-No control was made to make sure that the algorithms actually returned a true
-boolean value. This would also be a great area of improvement, as this fact
-basically deems these tests as useless. \\ 
+times of the probabilistic algorithms are proportional to this $k$ constant.
+Therefore, testing different values of $k$ for each algorithm would be essential
+to determine the actual efficiency of the probabilistic algorithms. Another
+aspect of having an arbitrary $k$ is that the accuracy of the tests might be
+impeded. No control was made to make sure that the algorithms actually returned
+a true boolean value. This would also be a great area of improvement, as this
+fact basically deems these tests as useless. \\
 
 \end{document}
