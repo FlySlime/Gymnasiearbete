@@ -17,5 +17,6 @@ Insert abstract here soon
 ## Acknowledgments
 
 -   Belal Tulimat 
+-   Bertil Nilsson
 -   Björn Norén
 -   Jonas Ingesson
