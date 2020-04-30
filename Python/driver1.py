@@ -1,7 +1,7 @@
 # This driver file finds the largest prime within
 # a minute and prints it.
 #
-# Change line 36 to desired algorithm, i.e. brute(n).
+# Change line 35 to desired algorithm, i.e. brute(n).
 # WARNING! Lucas-lehmer cannot be used.
 #
 # Make sure fermat and millerRabin are written as

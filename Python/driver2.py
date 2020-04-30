@@ -4,7 +4,7 @@
 # on with an 'X'. However, if it succeeded, it will
 # instead print an 'O' and the time it took.
 #
-# Change line 56 to desired algorithm, i.e. brute(n).
+# Change line 58 to desired algorithm, i.e. brute(n).
 #
 # Make sure fermat and millerRabin are written as
 # <function>(n, 10). Where 10 is k, the second parameter

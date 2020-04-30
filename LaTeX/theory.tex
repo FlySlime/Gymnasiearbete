@@ -20,6 +20,8 @@ $127$. The eight largest prime numbers are mersenne primes
 exploitable properties by computers, making them faster to test for primality
 than normal integers.
 
+\newpage
+
 \subsection{The Fundamental Theory of Arithmetic} \label{arithmetic} The
 Fundamental Theory of Arithmetic \cite{theorem:arithmetic} states that all
 integers greater than $1$ is either a prime, or can be expressed as a product of
@@ -28,30 +30,42 @@ its own factorisation containing only primes, unless it is a prime itself.
 \newline
 \\*
 This study relies on the fact that there is an infinite amount of primes. The
-proof for this is a simple proof by contradiction:
+proof for this is a simple proof by contradiction: \\
 
 \begin{mdframed}
-  Assume that there is a finite amount of primes and make a list of them:
+  \begin{center}
+    Assume that there is a finite amount of primes and make a list of them:
+  \end{center}
 
-  $p_1, p_2, p_3, p_4, p_5, ...$ \newline
-  \\*
-  Let the constant $Q$ be the product of all the primes in the list and add 1:
+  \begin{center}
+    $p_1, p_2, p_3, p_4, p_5, ...$
+  \end{center}
+  \newline
 
-  $Q = p_1 * p_2 * p_3 * ... + 1$ \newline
-  \\*
+  \begin{center}
+    Let the constant $Q$ be the product of all the primes in the list plus $1$:
+  \end{center}
+
+  \begin{center}
+    $Q = p_1 * p_2 * p_3 * ... + 1$
+  \end{center}
+  \newline
+
+  \centering
   According to the fundamental theorem of arithmetic, $Q$ must be a prime since
   none of the primes in the list divide $Q$ evenly because of the $1$; therefore
   making the list incomplete and proving that you cannot make a finite list of
   all primes.
 \end{mdframed}
+\newpage
 
 \subsection{The Prime Number Theorem}
 The Prime Number Theorem \cite{theorem:prime_num} describes approximately how
 many primes there are less than or equal to a given number. The function $\pi(N)
-\sim \frac{N}{ln(N)}$ gives the expected amount of primes below a certain $N$.
-Graphing this function shows that primes become less common for greater $N$.
+\sim \frac{N}{\ln(N)}$ gives the expected amount of primes below a certain $N$.
+Graphing this function shows that primes become less common for greater $N$. \\
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \begin{center}
     \begin{tikzpicture}
       \begin{axis}[ axis lines = left, xlabel = $N$, ylabel = {}, ]
@@ -80,8 +94,8 @@ use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
 increases as the input size increases. For example, $\mathcal{O}(N)$ will grow
 linearly with the input size. Increasing the input size by a factor of 10, will
 also increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the
-other hand, $\mathcal{O}(log(n))$ grows logarithmically, which is far more
-efficient for bigger input sizes, as $\mathcal{O}(log(N))$ is strictly smaller
+other hand, $\mathcal{O}(\log(n))$ grows logarithmically, which is far more
+efficient for bigger input sizes, as $\mathcal{O}(\log(N))$ is strictly smaller
 than $N$ for large enough values. The base for logarithms in the Big O Notation
 is not relevant. The proof as to why the base is irrelevant will not be
 provided. \newline
@@ -94,7 +108,7 @@ Since the Big O Notation denotes the growth of the runtime as
 $\lim_{N\to\infty}$, two notations can be added together rather easily. For
 example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and
 another with $\mathcal{O}(N^{2})$, will have an overall time complexity of
-$\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$. 
+$\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$.
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a one-hundred percent definite test for primes, that
@@ -145,8 +159,10 @@ that only works for Mersenne numbers. It takes advantage of the special
 properties of mersenne numbers: \newline
 
 \begin{mdframed}
-  For some $p>2$, $M_p=2^p-1$ is prime if $M_p$ divides $S_{p-2}$ where $S_0=4$ and
-  $S_k=(S_{k-1})^2-2$ for $k>0$.
+  \begin{center}
+    For some $p>2$, $M_p=2^p-1$ is prime if $M_p$ divides $S_{p-2}$ where $S_0=4$ and
+    $S_k=(S_{k-1})^2-2$ for $k>0$.
+  \end{center}
 \end{mdframed}
 
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
