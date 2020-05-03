@@ -14,7 +14,7 @@ Insert abstract here soon
 -   **Ibrahim Abdulhussein** - [flyslime](https://github.com/flyslime)
 -   **Robin Brusbo** - [robinbrusbo](https://github.com/robinbrusbo)
 
-## Acknowledgments
+## Acknowledgements
 
 -   Belal Tulimat 
 -   Bertil Nilsson
