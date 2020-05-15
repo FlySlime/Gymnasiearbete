@@ -1,0 +1,31 @@
+* Sammanfattning
+- Primtal finns, de kan användas i RSA, vi tog 5 metoder att testa primtal. Bla bla bla.
+
+* Struktur
+- Bra struktur.
+- Struktur på diskussion flummig, saknar röd tråd.
+- Diskussion är lite flummig. Syfte och frågeställningar är bra, men det står inte mycket omförsta experimentet, hade varit mer optimalt att inte beblanda de olika testerna i discussion. 
+
+* Språket
+- Enheltligt och håller hög nivå. Vetenskapligt. Enkelt att förstå
+- Det enda språkliga var att "it is" inte ska vara "its"
+
+* Innehållet
+- Allmän bild: Väldigt relevant och informationsrik.
+- Allmän grej är att blanda lilla n och stora N, håll det enhetligt. 
+- Förhållandet mellan pi(n) och n är inte linjärt.
+- Vid introducerandet av algoritmerna: skriv ut vilket språk det är skrivet i.
+- Pseudokod? Jonas håller med. Eller så kan man kommentera koden, python är ändå så likt pseudocode. 
+- På alla andra metoder har ni skrivit probabilistic vs deterministic. Skriv även ut detta på brute force och smart brute force. 
+- Kunnat använda källor när ni pratar om de olika algoritmerna. 
+- Motivera på vilket sätt tidskomplexiteten beräknas. Hänvisa till någon källa annars. 
+
+* Källorna
+- Korrekt angivna
+- Många från wikipedia, få lite mer nyans på det. 
+
+* Sammanfattning
+- Överlag bra GA strukturen var flite flummig, kan förbättra i diskussion, språket är bra baturvetenskapligt, innehållsmässigt bra och informationsrikt. En del att förbättra men inget farligt. Överlag intressant och lärt oss mycket. Bra jobbat grymt. 
+- Roligt med teoretiskt arbete men man får en experimentell del. 
+
+Slutgiltig inlämning den 25/5.
