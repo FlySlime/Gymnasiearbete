@@ -80,9 +80,13 @@ Graphing this function shows that primes become less common for greater $N$. \\
     of primes below it.}
 \end{figure}
 
-This proves that primes do not show up linearly, meaning a computer that is
+Worth to note is that $\pi(N)$ looks linear in this graph. The function is not
+actually linear, but because of the graph's large domain, the functions seems
+like it is linear.
+
+This shows that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
-largest factor for verifying primes faster are the \textit{algorithms}.
+largest factor for verifying primes faster is the \textit{algorithms}.
 
 \subsection{Time Complexity}
 
@@ -126,14 +130,17 @@ factors, $k$, tested.
 
 \subsection{Algorithms}
 
-\subsubsection{Brute-force} \label{brute} The brute force method tests all the
+\subsubsection{Brute-force} \label{brute} The brute force method is a
+deterministic method that tests all the
 integers, $n$, between $2$ and $p-1$ and checks if $n$ satisfies $n \equiv 0
 \Mod{p}$. If the condition is satisfied, $n$ would be a divisor of $p$ which
 would make $p$ not a prime. However, if the loop completes without finding any
 divisors to $p$, then $p$ is prime. The brute force algorithm is a definite
 test, since it follows the definition of a prime; $p$ is prime if and only if
 there are no divisors except for 1 and $p$ itself. The algorithm's time
-complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
+complexity is $\mathcal{O}(N)$, meaning it increases linearly. The code for this
+algorithm is shown below. All code in this study will be written in Python. The
+reason behind this will be discussed later.\newline
 
 \lstinputlisting[language=python]{../Python/brute.py}
 
@@ -141,7 +148,8 @@ complexity is $\mathcal{O}(N)$, meaning it increases linearly. \newline
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
 By utilising some properties of primes, the smart brute force has a time
 complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$
-complexity from the brute force. \\
+complexity from the brute force. Just like the original brute-force, this
+algorithm is deterministic aswell.\\
 
 Since a prime can never have the factor $2$ in them, it is sufficient to only
 test odd numbers. Assuming that $p$ is a composite, it must have at least 2

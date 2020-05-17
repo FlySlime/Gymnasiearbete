@@ -1,6 +1,5 @@
 import random
 
-
 def findIntegers(n):
     counter = 0
     number = n - 1
@@ -8,7 +7,6 @@ def findIntegers(n):
         counter += 1
         number //= 2
     return (counter, number)
-
 
 def millerRabin(n, k):
     if n < 5:  # n under 5 cannot be verified
