@@ -6,6 +6,7 @@
   - Det enda språkliga var att "it is" inte ska vara "its"
 
 * Innehållet
+  - Förhållandet mellan pi(n) och n är inte linjärt.
   - Allmän grej är att blanda lilla n och stora N, håll det enhetligt. 
   - Pseudokod? Jonas håller med. Eller så kan man kommentera koden, python är ändå så likt pseudocode. 
   - Kunnat använda källor när ni pratar om de olika algoritmerna. 
