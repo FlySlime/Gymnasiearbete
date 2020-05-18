@@ -5,14 +5,14 @@
 
 As showed in both tests, the Brute-force was the slowest of all algorithms
 tested, and could only handle numbers up to the magnitude of $10^{9}$. This
-makes sense considering the time complexity, $\mathcal{O}(n)$. Since a modern
+makes sense considering the time complexity, $\mathcal{O}(N)$. Since a modern
 computer can do a little more than $10^{8}$ operations per second, a result of
 $280$ seconds is expected. For the algorithm to verify $2^{61}-1$, it would take
 around $10^{10}$ seconds, which is more than $300$ years. This demonstrates the
-fact that efficient algorithms must be found. As $\mathcal{O}(n)$ grows
+fact that efficient algorithms must be found. As $\mathcal{O}(N)$ grows
 linearly, it does not take much for the runtime to exceed our lifetimes. \\
 
-The Smart Brute-force, with its time complexity of $\mathcal{O}(\sqrt{n})$, was
+The Smart Brute-force, with its time complexity of $\mathcal{O}(\sqrt{N})$, was
 considerably faster and completed $p=61$ in $100$ seconds, rather than $300$
 years as in the case of the normal brute-force. However, that still doesn't
 increase the algorithm's performance by much, since it exceeds the time-limit on

@@ -96,7 +96,7 @@ use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
 increases as the input size increases. For example, $\mathcal{O}(N)$ will grow
 linearly with the input size. Increasing the input size by a factor of 10, will
 also increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the
-other hand, $\mathcal{O}(\log(n))$ grows logarithmically, which is far more
+other hand, $\mathcal{O}(\log(N))$ grows logarithmically, which is far more
 efficient for bigger input sizes, as $\mathcal{O}(\log(N))$ is strictly smaller
 than $N$ for large enough values. The base for logarithms in the Big O Notation
 is not relevant. The proof as to why the base is irrelevant will not be
@@ -147,7 +147,7 @@ reason behind this will be discussed later.\newline
 \subsubsection{Smart Brute-force}
 The smart brute force is a variant of the brute force algorithm (\ref{brute}).
 By utilising some properties of primes, the smart brute force has a time
-complexity of $\mathcal{O}(\sqrt{n})$ compared to the $\mathcal{O}(N)$
+complexity of $\mathcal{O}(\sqrt{N})$ compared to the $\mathcal{O}(N)$
 complexity from the brute force. Just like the original brute-force, this
 algorithm is deterministic aswell.\\
 
@@ -213,7 +213,7 @@ is also faster for bigger $n$ compared to the deterministic version. For these
 reasons, the probabilistic version is chosen for this study. \newline
 
 The time complexity for the probabilistic version is $\mathcal{O}(k
-\log^{3}(n))$, where $k$ is the amount of rounds the algorithm will perform. \\
+\log^{3}(N))$, where $k$ is the amount of rounds the algorithm will perform. \\
 
 \lstinputlisting[language=python]{../Python/milrab.py}
 
