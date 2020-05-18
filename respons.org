@@ -1,0 +1,16 @@
+* Struktur
+  - Struktur på diskussion flummig, saknar röd tråd.
+  - Diskussion är lite flummig. Syfte och frågeställningar är bra, men det står inte mycket omförsta experimentet, hade varit mer optimalt att inte beblanda de olika testerna i discussion. 
+
+* Språket
+  - Det enda språkliga var att "it is" inte ska vara "its"
+
+* Innehållet
+  - Allmän grej är att blanda lilla n och stora N, håll det enhetligt. 
+  - Pseudokod? Jonas håller med. Eller så kan man kommentera koden, python är ändå så likt pseudocode. 
+  - Kunnat använda källor när ni pratar om de olika algoritmerna. 
+  - Motivera på vilket sätt tidskomplexiteten beräknas. Hänvisa till någon källa annars. 
+  - På alla andra metoder har ni skrivit probabilistic vs deterministic. Skriv även ut detta på brute force och smart brute force. 
+
+* Källor
+  - Många från wikipedia, få lite mer nyans på det. Kanske?
