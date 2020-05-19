@@ -9,6 +9,7 @@
    - Använd källor när ni pratar om de olika algoritmerna
    - Motivera tidskomplexiteten (med andra ord lägg in källor)
    - Se över discussion och conclusion
-** Läs igenom hela arbetet tillsammans
-** Lämna in
+** Efter respons:
+   - Läs igenom hela arbetet tillsammans
+   - Lämna sedan in
 
