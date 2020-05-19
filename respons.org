@@ -1,17 +1,14 @@
-* Struktur
-  - Struktur på diskussion flummig, saknar röd tråd.
-  - Diskussion är lite flummig. Syfte och frågeställningar är bra, men det står inte mycket omförsta experimentet, hade varit mer optimalt att inte beblanda de olika testerna i discussion. 
+* Att göra:
+** Ta itu med responsen:
+   - Diskussion är flummig, skaffa röd tråd
+   - Skriv mer om varför det första experimentet gjordes
+   - Beblanda inte de olika testerna i discussion
+   - Skriv om miller rabin in discussion
+   - Dubbelkolla conclusion
+   - Lägg in kommentarer till koden
+   - Använd källor när ni pratar om de olika algoritmerna
+   - Motivera tidskomplexiteten (med andra ord lägg in källor)
+   - Se över discussion och conclusion
+** Läs igenom hela arbetet tillsammans
+** Lämna in
 
-* Språket
-  - Det enda språkliga var att "it is" inte ska vara "its"
-
-* Innehållet
-  - Förhållandet mellan pi(n) och n är inte linjärt.
-  - Allmän grej är att blanda lilla n och stora N, håll det enhetligt. 
-  - Pseudokod? Jonas håller med. Eller så kan man kommentera koden, python är ändå så likt pseudocode. 
-  - Kunnat använda källor när ni pratar om de olika algoritmerna. 
-  - Motivera på vilket sätt tidskomplexiteten beräknas. Hänvisa till någon källa annars. 
-  - På alla andra metoder har ni skrivit probabilistic vs deterministic. Skriv även ut detta på brute force och smart brute force. 
-
-* Källor
-  - Många från wikipedia, få lite mer nyans på det. Kanske?
