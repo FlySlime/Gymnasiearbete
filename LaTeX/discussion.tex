@@ -1,15 +1,14 @@
 % !TEX root = ./main.tex
 \documentclass[main.tex]{subfiles}
 \begin{document}
-% Answer questions Why k = 10? What could our tests imply? Important of results.
 
-As showed in both tests, the Brute-force was the slowest of all algorithms
+Both tests showed that the Brute-force was the slowest of all algorithms
 tested, and could only handle numbers up to the magnitude of $10^{9}$. This
 makes sense considering the time complexity, $\mathcal{O}(N)$. Since a modern
 computer can do a little more than $10^{8}$ operations per second, a result of
-$280$ seconds is expected. For the algorithm to verify $2^{61}-1$, it would take
+$280$ seconds is very reasonable. For the algorithm to verify $2^{61}-1$, it would take
 around $10^{10}$ seconds, which is more than $300$ years. This demonstrates the
-fact that efficient algorithms must be found. As $\mathcal{O}(N)$ grows
+fact that efficient algorithms have to be used in order to find larger primes. As $\mathcal{O}(N)$ grows
 linearly, it does not take much for the runtime to exceed our lifetimes. \\
 
 The Smart Brute-force, with its time complexity of $\mathcal{O}(\sqrt{N})$, was
@@ -21,9 +20,25 @@ the next test, $p=107$. \\
 On the other hand, Lucas-Lehmer could handle $2^{44,497}$, which is approximately
 equal to $10^{13,394}$. Compared to the Brute-force algorithms, this is a
 substantial step for the deterministic algorithms. Lucas-Lehmer demonstrates
-how efficient an algorithm can become if it exploits properties of Mersenne primes. \\
+how efficient an algorithm can become if it exploits the properties of Mersenne primes. \\
 
-WRITE ABOUT FERMAT AND MILLER-RABIN HERE \\
+According to the tests, the Fermat primality test clocks in at a second place,
+not far behind Lucas-Lehmer. The interpretation of this result must however be
+taken with a pinch of salt. Only one arbitrary value of $k$ was tested, and it
+would be interesting to see how this value changes the runtime of the algorithm.
+Another method flaw is that no verification was done to ensure that the
+algorithm returned a correct boolean value. Since this algorithm is
+probabilistic, it is essential for such a test to also verify that the algorithm
+does not give false positives or negatives. This fact actually deems the tests
+useless when it comes to the probabilistic algorithms.\\
+
+As for the Miller-Rabin algorithm, the same flaws still apply and therefore it
+is not possible to compare it to the other algorithms. One would think that it
+is at least possible to compare Miller-Rabin to Fermat, as their time
+complexities both are proportional to $k$ and that the value of $k$ still would
+not affect their relative performance. This is partly true and partly false. For
+test 1, this will not work since there still is not a validity test. For test 2,
+however, this is true. Miller-Rabin is therefore concluded to be slower than Fermat.
 
 Overall, the algorithms tested correlate well to their respective Big O
 notation. However, there is still a non-negligible variance. This is especially
@@ -38,11 +53,11 @@ that the tests done in (\ref{test2}) therefore are not reliable. This is
 something that should be done if this study were to ever be re-done. \\
 
 Even though the deterministic algorithms managed to verify numbers up to
-$10^{13,394}$, it's nothing compared to the largest prime known to man,
+$10^{13,394}$, it is not even close to the largest prime known to man,
 $2^{82,589,933} - 1$ \cite{prime:largest_digits}. There are many factors as to
-why the results don't come near the largest prime. One of the factors being that
-the algorithms chosen for this study are both simple to understand and
-implement. This is done to satisfy the purpose earlier introduced. The
+why the results do not come near the largest prime. One such factor is that the
+algorithms explained in this essay are relatively simple to implement and
+understand. The
 algorithms used in finding the largest primes are \emph{extremely} complicated
 to understand and especially implement. Other factors can be time and computers, which are huge limits for this study. \\
 
