@@ -5,32 +5,32 @@
 Both tests showed that the Brute-force was the slowest of all algorithms
 tested, and could only handle numbers up to the magnitude of $10^{9}$. This
 makes sense considering the time complexity, $\mathcal{O}(N)$. Since a modern
-computer can do a little more than $10^{8}$ operations per second, a result of
-$280$ seconds is very reasonable. For the algorithm to verify $2^{61}-1$, it would take
+computer can do a little more than $10^{9}$ operations per second, a result of
+$280$ seconds is reasonable. For the algorithm to verify $2^{61}-1$, it would take
 around $10^{10}$ seconds, which is more than $300$ years. This demonstrates the
 fact that efficient algorithms have to be used in order to find larger primes. As $\mathcal{O}(N)$ grows
-linearly, it does not take much for the runtime to exceed our lifetimes. \\
+linearly, it does not take much for the run-time to exceed our lifetimes. \\
 
 The Smart Brute-force, with its time complexity of $\mathcal{O}(\sqrt{N})$, was
 considerably faster and completed $p=61$ in $100$ seconds, rather than $300$
-years as in the case of the normal brute-force. However, that still doesn't
+years as in the case of the normal Brute-force. However, that still does not
 increase the algorithm's performance by much, since it exceeds the time-limit on
 the next test, $p=107$. \\
 
-On the other hand, Lucas-Lehmer could handle $2^{44,497}$, which is approximately
+On the other hand, Lucas-Lehmer could handle $2^{44,497} - 1$, which is approximately
 equal to $10^{13,394}$. Compared to the Brute-force algorithms, this is a
 substantial step for the deterministic algorithms. Lucas-Lehmer demonstrates
-how efficient an algorithm can become if it exploits the properties of Mersenne primes. \\
+how efficient an algorithm can become if it exploits the properties of mersenne primes. \\
 
 According to the tests, the Fermat primality test clocks in at a second place,
 not far behind Lucas-Lehmer. The interpretation of this result must however be
 taken with a pinch of salt. Only one arbitrary value of $k$ was tested, and it
-would be interesting to see how this value changes the runtime of the algorithm.
-Another method flaw is that no verification was done to ensure that the
+would be relevant to see how this value changes the run-time of the algorithm.
+Another flaw in the methods is that no verification was done to ensure that the
 algorithm returned a correct boolean value. Since this algorithm is
 probabilistic, it is essential for such a test to also verify that the algorithm
-does not give false positives or negatives. This fact actually deems the tests
-useless when it comes to the probabilistic algorithms.\\
+does not give false positives or negatives. This fact makes the tests
+irrelevant when it comes to the probabilistic algorithms. \\
 
 As for the Miller-Rabin algorithm, the same flaws still apply and therefore it
 is not possible to compare it to the other algorithms. One would think that it
@@ -38,7 +38,8 @@ is at least possible to compare Miller-Rabin to Fermat, as their time
 complexities both are proportional to $k$ and that the value of $k$ still would
 not affect their relative performance. This is partly true and partly false. For
 test 1, this will not work since there still is not a validity test. For test 2,
-however, this is true. Miller-Rabin is therefore concluded to be slower than Fermat.
+however, this is true. Miller-Rabin is therefore found to be slower than
+Fermat. \\
 
 Overall, the algorithms tested correlate well to their respective Big O
 notation. However, there is still a non-negligible variance. This is especially
@@ -59,33 +60,22 @@ why the results do not come near the largest prime. One such factor is that the
 algorithms explained in this essay are relatively simple to implement and
 understand. The
 algorithms used in finding the largest primes are \emph{extremely} complicated
-to understand and especially implement. Other factors can be time and computers, which are huge limits for this study. \\
-
-The most efficient algorithm which was tested by this study was the Lucas-Lehmer
-algorithm, as shown in (\ref{test2}). It could handle $2^{44,497}-1$. This is
-however nowhere near the current largest prime, $2^{82,589,933}-1$. There are
-several different reasons for this. The current largest prime was not even found
-using the Fermat primality test. The algorithm used to find this large number is
-a more optimised version of the Lucas-Lehmer. This version is extremely
-complicated and is far beyond the scope of this study, since it requires a ph.D.
-to even understand. Even if the Fermat primality test were used to find this
-large prime, we would not be able to recreate it. The laptop used in this study
-is nothing compared to the GIMPS coalition of many computers, each
-one of them more powerful than this laptop. \\
+to understand and especially to implement. Other factors can be time and computers, which are huge limits for this study. \\
 
 A future test regarding this subject could be improved by testing different
 values for the constant $k$ and exploring how these different values would
-affect the runtimes of the probabilistic algorithms. Another area of improvement
+affect the run-times of the probabilistic algorithms. Another area of improvement
 would be to increase the number of test cases in both (\ref{test1}) and
-(\ref{test2}) in order to 1. draw conclusions regarding the variance and 2. draw
-conclusions regarding the accuracy of the runtimes in test (\ref{test2}). Only
-having one test case per algorithm and $p$ is like conducting a survey with one
-test person, it is not accurate at all. \\
+(\ref{test2}) in order to draw conclusions regarding:
+
+\begin{itemize}
+  \item The variance.
+  \item The accuracy of the run-times in test (\ref{test2}).
+\end{itemize}
 
 The constant $k$ was chosen to be $10$, which is a relatively arbitrary number.
 Research on the internet did not yield a definite answer as to what value $k$
-should have. Some algorithms had $k = 3$ while others had $k = 10$. The run
-times of the probabilistic algorithms are proportional to this $k$ constant.
+should have. Some algorithms used $k = 3$ while others used $k = 10$. The run-times of the probabilistic algorithms are proportional to this $k$ constant.
 Therefore, testing different values of $k$ for each algorithm would be essential
 to determine the actual efficiency of the probabilistic algorithms. Another
 aspect of having an arbitrary $k$ is that the accuracy of the tests might be

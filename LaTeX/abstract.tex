@@ -6,7 +6,7 @@ Prime numbers are a fundamental part of number theory. Primes have many special
 properties that can be exploited. One of the most common applications being
 RSA-encryption, which uses a product of two large primes as a key. The rise of
 more powerful computers has led to weaker keys being cracked. Therefore it is in
-a Computer Scientists' interest to find larger primes. In order to accomplish
+a computer scientist's interest to find larger primes. In order to accomplish
 this, efficient algorithms have to be developed. This study investigates the
 efficiency of five simple primality testing algorithms:
 \begin{multicols}{3}
@@ -14,16 +14,16 @@ efficiency of five simple primality testing algorithms:
   \item Brute-force
   \item Smart Brute-force
   \item Lucas-Lehmer
-  \item Fermat Primality Test
   \item Miller-Rabin
+  \item Fermat Primality Test
   \end{itemize}
 \end{multicols}
 
 In the first test, the algorithms were given the task of finding the largest
-prime number within $60$ seconds. The test is performed by looping through the
+prime number within $60$ seconds. The test was performed by looping through the
 natural numbers starting from $2$. The first test could not include
 Lucas-Lehmer, as it only works for mersenne numbers. In the first test it was
-determined that the Fermat primality test found the largest prime, followed by Lucas-Lehmer. \\
+determined that the Fermat primality test found the largest prime. \\
 
 In the second test, the algorithms were given mersenne primes of different sizes
 and returned the time it took for them to finish verifying that it was a prime.
@@ -32,7 +32,7 @@ However, if the time exceeded $120$ seconds, the test case would be deemed as a
 Lucas-Lehmer was the fastest algorithm to verify mersenne primes. \\
 
 The purpose of this study is not to find newer primes, but rather to demonstrate
-the correlation between the Big O notation and runtimes, as-well as giving an
+the correlation between the Big O notation and run-times, as-well as giving an
 introduction to primality testing algorithms. \\
 
 \end{document}

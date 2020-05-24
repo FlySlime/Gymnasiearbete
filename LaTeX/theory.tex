@@ -3,10 +3,9 @@
 \begin{document}
 
 \subsection{What Is a Prime?}
-Prime numbers are defined as \textit{positive integers} which only have the
-factors 1 and itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other
-hand $5$ is a prime since the only divisors of $5$ is $1$ and $5$. If the
-number, $n$, is not prime, it is referred to as a \textit{composite number}. \\
+Prime numbers are defined as positive integers which only have the factors 1 and
+itself. Thus $4$ is not a prime since $4 = 2 * 2$. On the other hand, $5$ is a
+prime since the only divisors of $5$ is $1$ and $5$. If a number is not prime, it is referred to as a \textit{composite number}. \\
 
 An exception to this definition is $1$, since it is the first natural number.
 Subsection (\ref{arithmetic}) provides a more in-depth definition of prime
@@ -15,8 +14,8 @@ numbers, and a mathematical explanation about why $1$ is not a prime number.
 \subsection{Mersenne Primes}
 A mersenne prime is a prime that can be written as $2^{p}-1$ where $p$ is also a
 prime number. An example of this is $2^5-1$ which equals to the prime number
-$127$. The eight largest prime numbers are mersenne primes
-\cite{prime:largest_digits}. The reason being because of their easily
+$127$. The eight largest known prime numbers are all mersenne primes
+\cite{prime:largest_digits}. The reason for this is because of their easily
 exploitable properties by computers, making them faster to test for primality
 than normal integers.
 
@@ -28,8 +27,8 @@ its own factorisation containing only primes, unless it is a prime itself.
 \newline
 \\*
 This study relies on the fact that there is an infinite amount of primes. The
-proof for this is a simple proof by contradiction: \\
-
+proof for this is a simple proof by contradiction:
+\newpage
 \begin{mdframed}
   \begin{center}
     Assume that there is a finite amount of primes and make a list of them:
@@ -57,6 +56,8 @@ proof for this is a simple proof by contradiction: \\
 \end{mdframed}
 \vspace{5mm}
 
+\newpage
+
 \subsection{The Prime Number Theorem}
 The Prime Number Theorem \cite{theorem:prime_num} describes approximately how
 many primes there are less than or equal to a given number. The function $\pi(N)
@@ -77,22 +78,22 @@ Graphing this function shows that primes become less common for greater $N$. \\
   \end{center}
   \caption{The graph of $\pi(N)$ and $N$ from $0$ to $10^{5}$ can be used to
     compare the relationship between the number $N$ and the approximate amount
-    of primes below it.}
+    of primes below it. Worth to note is that $\pi(N)$ looks linear in this
+    graph. The function is not actually linear, but because of the graph's large
+    domain, the function looks like it is linear.}
 \end{figure}
-
-Worth to note is that $\pi(N)$ looks linear in this graph. The function is not
-actually linear, but because of the graph's large domain, the functions seems
-like it is linear.
 
 This shows that primes do not show up linearly, meaning a computer that is
 twice as powerful will \textit{not} produce twice as many primes. Instead, the
 largest factor for verifying primes faster is the \textit{algorithms}.
 
+\newpage
+
 \subsection{Time Complexity}
 
 Time complexity \cite{theorem:time_comp} is a concept within computer science,
 which describes the approximate time for a program to complete. The study will
-use of the Big O Notation \cite{theorem:big_O}, which notates how the run time
+use of the Big O Notation \cite{theorem:big_O}, which notates how the run-time
 increases as the input size increases. For example, $\mathcal{O}(N)$ will grow
 linearly with the input size. Increasing the input size by a factor of 10, will
 also increase the run time by a factor of 10, as such $\mathcal{O}(10N)$. On the
@@ -102,11 +103,11 @@ than $N$ for large enough values. The base for logarithms in the Big O Notation
 is not relevant. The proof as to why the base is irrelevant will not be
 provided. \newline
 \\*
-The amount of operations a modern computer can do is in the order of magnitude
-of $10^{9}$ per second. An operation is, for example, adding two numbers or
+The amount of operations a modern computer can do is on the order of magnitude
+of $10^{9}$ per second \cite[]{algh:johan}. An operation is, for example, adding two numbers or
 storing a number in an array. \newline
 \\*
-Since the Big O Notation denotes the growth of the runtime as
+Since the Big O Notation denotes the growth of the run-time as
 $\lim_{N\to\infty}$, two notations can be added together rather easily. For
 example, a program that has two bits of codes, one with $\mathcal{O}(N)$ and
 another with $\mathcal{O}(N^{2})$, will have an overall time complexity of
@@ -114,12 +115,12 @@ $\mathcal{O}(N^{2})$ since $N^{2}$ dominates for large values of $N$.
 
 \subsection{Deterministic vs. Probabilistic}
 A deterministic test is a one-hundred percent definite test for primes, that
-gives no false positives. It either returns true if the number being tested if
+gives no false positives. It either returns true if the number being tested is
 prime, or false if the number is not prime. \newline
 
 Probabilistic tests differ from deterministic tests by having a stochastic,
-random factor in them. They are not one-hundred percent definite and therefore
-sometimes will give false positives/negatives. \\
+random, factor in them. They are not one-hundred percent definite and therefore
+sometimes will give false positives or negatives. \\
 
 An example of a probabilistic test for the number $p$ would be to test a random
 number below $p$ and see if it divides $p$ evenly. This test would give a lot of
@@ -132,11 +133,11 @@ factors, $k$, tested.
 
 \subsubsection{Brute-force} \label{brute}
 
-The Brute-Force method is a deterministic algorithm that tests all the integers,
+The Brute-force method is a deterministic algorithm that tests all the integers,
 $n$, between $2$ and $p-1$ and checks if $n$ satisfies $n \equiv 0 \Mod{p}$. If
 the condition is satisfied, $n$ would be a divisor of $p$ which would make $p$
 not a prime. However, if the loop completes without finding any divisors to $p$,
-then $p$ is prime. \\
+then $p$ is definitely prime. \\
 
 A brute-force algorithm is a very straight-forward approach to solve a given
 problem. Given some input, it will try all possible combinations until the
@@ -145,7 +146,7 @@ algorithm is a definite test, since it follows the definition of a prime; $p$ is
 prime if and only if there are no divisors except for 1 and $p$ itself. \\
 
 The algorithm's time complexity is $\mathcal{O}(N)$, meaning it increases
-linearly. This is proven by the description of the algorithm, there are $p-1$
+linearly. This is shown by the description of the algorithm; there are $p-1$
 statements to verify, therefore a linear notation. \\
 
 The Python code for the algorithm is shown below. \newline
@@ -154,18 +155,18 @@ The Python code for the algorithm is shown below. \newline
 
 \subsubsection{Smart Brute-force}
 
-The Smart Brute-Force is deterministic algorithm which is a variant of the
+The Smart Brute-force is deterministic algorithm which is a variant of the
 brute-force algorithm (\ref{brute}). By utilising some properties of primes, the
-smart brute-force has the time complexity of $\mathcal{O}(\sqrt{N})$ compared to
-the $\mathcal{O}(N)$ complexity from the ordinary brute-force \cite{algh:brute}.
+Smart Brute-force has the time complexity of $\mathcal{O}(\sqrt{N})$ compared to
+the $\mathcal{O}(N)$ complexity from the ordinary Brute-force \cite{algh:brute}.
 The explanation of the algorithm and the time complexity is described as such:
 \\
 
 \begin{mdframed}
   \begin{center}
     Since a prime can never have the factor $2$, it is sufficient to only test
-    odd numbers. Assuming that $p$ is a composite, it must have at least 2
-    factors. Therefore, the smart brute-force only tests numbers up to
+    odd numbers. Assuming that $p$ is composite, it must have at least 2
+    factors. Therefore, the Smart Brute-force only tests numbers up to
     $\sqrt{p}$, since if a factor larger than $\sqrt{p}$ were to be found, the
     others must have already been tested, hence $\mathcal{O}(\sqrt{N})$.
   \end{center}
@@ -176,20 +177,20 @@ The explanation of the algorithm and the time complexity is described as such:
 \subsubsection{Lucas-Lehmer}
 
 The Lucas-Lehmer algorithm \cite{algh:lucas} is a deterministic primality test
-that only works for Mersenne numbers. It takes advantage of the special
+that only works for mersenne numbers. It takes advantage of the special
 properties of mersenne numbers: \newline
 
 \begin{mdframed}
   \begin{center}
     For some $p>2$, $M_p=2^p-1$ is prime if $M_p$ divides $S_{p-2}$ where $S_0=4$ and
-    $S_k=(S_{k-1})^2-2$ for $k>0$.
+    $S_k=(S_{k-1})^2-2$ for $k>0$. \cite[]{algh:lucas}
   \end{center}
 \end{mdframed}
 
 The Lucas-Lehmer test has helped the GIMPS (Great Internet Mersenne Prime
 Search) \cite{GIMPS} to find many of the largest primes known. This is because
 the time complexity of the algorithm is much faster compared to the other
-algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$
+algorithms. The time complexity is $\mathcal{O}(\log^{2}(N) \log \log (N))$
 \cite{algh:lucas:time}. \\
 
 \lstinputlisting[language=python]{../Python/lucas.py}
@@ -197,7 +198,7 @@ algorithms. The time complexity being $\mathcal{O}(\log^{2}(N) \log \log N)$
 \subsubsection{Fermat} \label{fermat}
 
 The Fermat primality test \cite{algh:fermat} is a probabilistic algorithm. Its
-whole concept is based on Fermat's little theory \cite{fermat:little} which
+whole concept is based on Fermat's little theorem \cite{fermat:little} which
 states:
 
 \begin{mdframed}
@@ -208,12 +209,13 @@ states:
 \end{mdframed}
 
 To implement the Fermat test, the code randomises an integer for $a$ and checks
-if it agrees with the theory. If it does not, then $p$ cannot be prime. However
+if it agrees with the statement. If it does not, then $p$ cannot be prime. However
 if it does, then it is \emph{probably} prime. The accuracy of the test is higher
-if it tries more than one $a$. In the code the amount of \emph{rounds} is
-determined with the variable $k$. The time complexity for the algorithm is
+if it tries more than one $a$.
+In the code, the amount of different values of $a$ tested is determined with the variable $k$.
+The time complexity for the algorithm is
 $\mathcal{O}(k \log^{2}N \log \log N \log \log \log N)$ \cite{algh:fermat:time}.
-The speed of the test can be compared to Lucas-Lehmer. \\
+\\
 
 \lstinputlisting[language=python]{../Python/fermat.py}
 
@@ -228,8 +230,8 @@ theorem, in this case, the extended Riemann hypothesis \cite{riemann}. On the
 other hand, the probabilistic version is unconditional, meaning that it does not
 depend on an unproven theorem. This makes the probabilistic version a more
 reliable primality test. If the extended Riemann hypothesis were to be
-disproved, the deterministic version would fall apart. The probabilistic variant
-is also faster for bigger $n$ compared to the deterministic version. For these
+disproven, the deterministic version would fall apart. The probabilistic variant
+is also faster for bigger $N$ compared to the deterministic version \cite[]{algh:miller:time}. For these
 reasons, the probabilistic version is chosen for this study. \newline
 
 The time complexity for the probabilistic version is

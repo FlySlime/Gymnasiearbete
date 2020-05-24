@@ -8,7 +8,8 @@ def smartBrute(n):
         return False
     if n == 2:
         return True
-    # loops from 3 to sqrt(n), increases with 2 every loop
+    # loops from 3 to sqrt(n), increases
+    # with 2 every iteration
     for x in range(3, math.isqrt(n) + 1, 2):
         if n % x == 0:
             return False

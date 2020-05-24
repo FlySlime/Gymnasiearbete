@@ -2,13 +2,13 @@
 ** Ta itu med responsen:
    - [X] Förklara n och n/logn ploten bättre, ej linjär.
    - [X] Skriv mer om varför det första experimentet gjordes
-   - [ ] Lägg in kommentarer till koden
+   - [X] Lägg in kommentarer till koden
    - [X] Använd källor när ni pratar om de olika algoritmerna
-   - [ ] Motivera tidskomplexiteten (med andra ord lägg in källor)
+   - [X] Motivera tidskomplexiteten (med andra ord lägg in källor)
    - [X] Se över discussion och conclusion 
    - [X] Diskussion är flummig, skaffa röd tråd
    - [X] Beblanda inte de olika testerna i discussion
    - [X] Skriv om miller rabin in discussion
 ** Efter respons:
-   - [ ] Läs igenom hela arbetet tillsammans
+   - [X] Läs igenom hela arbetet tillsammans
    - [ ] Lämna sedan in
