@@ -11,4 +11,4 @@
    - [X] Skriv om miller rabin in discussion
 ** Efter respons:
    - [X] Läs igenom hela arbetet tillsammans
-   - [ ] Lämna sedan in
+   - [X] Lämna sedan in
