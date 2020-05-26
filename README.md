@@ -15,15 +15,15 @@ efficiency of five simple primality testing algorithms:
 - Fermat Primality Test
 
 In the first test, the algorithms were given the task of finding the largest
-prime number within $60$ seconds. The test was performed by looping through the
-natural numbers starting from $2$. The first test could not include
+prime number within 60 seconds. The test was performed by looping through the
+natural numbers starting from 2. The first test could not include
 Lucas-Lehmer, as it only works for mersenne numbers. In the first test it was
 determined that the Fermat primality test found the largest prime.
 
 In the second test, the algorithms were given mersenne primes of different sizes
 and returned the time it took for them to finish verifying that it was a prime.
-However, if the time exceeded $120$ seconds, the test case would be deemed as a
-``failure'' and immediately end the program. These tests concluded that
+However, if the time exceeded 120 seconds, the test case would be deemed as a
+"failure" and immediately end the program. These tests concluded that
 Lucas-Lehmer was the fastest algorithm to verify mersenne primes. 
 
 The purpose of this study is not to find newer primes, but rather to demonstrate
