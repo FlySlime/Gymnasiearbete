@@ -40,7 +40,7 @@ introduction to primality testing algorithms.
 -   **Ibrahim Abdulhussein** - [flyslime](https://github.com/flyslime)
 -   **Robin Brusbo** - [robinbrusbo](https://github.com/robinbrusbo)
 
-## Acknowledgements
+## Mentors
 
 -   Belal Tulimat 
 -   Bertil Nilsson
