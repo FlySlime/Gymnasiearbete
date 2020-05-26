@@ -1,8 +1,5 @@
 # Prime Numbers - Gymnasiearbete
 
-main.pdf can be found in LaTeX/
-
-
 Prime numbers are a fundamental part of number theory. Primes have many special
 properties that can be exploited. One of the most common applications being
 RSA-encryption, which uses a product of two large primes as a key. The rise of
